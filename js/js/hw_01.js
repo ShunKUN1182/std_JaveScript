@@ -4,15 +4,16 @@ const keisan=document.querySelector("#keisan");
 
 const keisan2=document.querySelector("#keisan2");
 
-const kigou=document.querySelector("#kigou");
-
 console.log(keisan);
 
-const namA=keisan;
-const namB=keisan2;
+const numA=keisan;
+const numB=keisan2;
 let mof;
-mof=keisan+keisan2;
+mof=numA+numB;
 
+btn.addEventListener("click",() =>{
+    console.log(mof);
+});
 
 
 console.log(mof);
