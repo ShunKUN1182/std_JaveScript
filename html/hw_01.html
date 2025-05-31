@@ -9,25 +9,45 @@
    <h1>
     宿題（電卓を作ろう）
    </h1> 
+   <table>
+      <form name="dentaku"></form>
+      <tbody>
 
-<form name="dentaku"></form>
-<!-- 7から9のボタン配置 -->
-<input type="button" value="7" onclick="">
-<input type="button" value="8">
-<input type="button" value="9"><br>
-<!-- 4から6のボタン配置 -->
-<input type="button" value="4">
-<input type="button" value="5">
-<input type="button" value="6"><br>
-<!-- 1から3のボタン配置 -->
-<input type="button" value="1">
-<input type="button" value="2">
-<input type="button" value="3"><br>
-<!-- リセット、０、イコールの配置 -->
- <input type="button" value="=">
- <input type="button" value="0">
- <input type="reset" value="c">
-</form>
+         <th colspan="4">
+            <input type="text" disabled>
+         </th>
+
+         <!-- 7から9のボタン配置 -->
+          <tr>
+            <td><input type="button" value="7" onclick=""></td>
+            <td><input type="button" value="8"></td>
+            <td><input type="button" value="9"></td>
+            <th><input type="button" value="/"></th>
+         </tr>
+         <!-- 4から6のボタン配置 -->
+          <tr>
+            <td><input type="button" value="4"></td>
+            <td><input type="button" value="5"></td>
+            <td><input type="button" value="6"></td>
+            <th><input type="button" value="*"></th>
+         </tr>
+         <!-- 1から3のボタン配置 -->
+          <tr>
+            <td><input type="button" value="1"></td>
+            <td><input type="button" value="2"></td>
+            <td><input type="button" value="3"></td>
+            <th><input type="button" value="-"></th>
+         </tr>
+         <!-- リセット、０、イコールの配置 -->
+          <tr>
+            <td><input type="button" value="="></td>
+            <td><input type="button" value="0"></td>
+            <td><input type="reset" value="c"></td>
+            <th><input type="button" value="+"></th>
+           </tr>
+         </tbody>
+      </form>
+</table>
    <script src="../js/hw_01.js"></script>
 </body>
 </html>
