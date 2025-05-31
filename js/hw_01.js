@@ -1,10 +1,22 @@
 const buttons = document.querySelectorAll('button');
-const keisan = document.querySelector('keisan')
+const keisan = document.querySelector("#keisan");
 
-let gangan="";
+let concatText="";
 function buttonPresseed(event) {
     const text = event.target.textContent;
-    gangan = gangan+text;
-    console.log(gangan);
-}
+
+    if(text === "="){
+        concatText = eval(concatText);
+    }else if(text === "C"){
+        concatText= "";
+    } else {   
+        concatText = concatText+text;
+    }
+    
+    keisan.textContent = concatText;
+
+    }
+
+
+
 buttons.forEach(button => button.addEventListener('click',buttonPresseed))
