@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>簡単な電卓</title>
+</head>
+<body>
+
+  <!-- 表示部分（テキストエリア） -->
+  <input type="text" id="display" readonly>
+
+  <!-- 数字ボタン -->
+  <button onclick="appendNumber('5')">5</button>
+  <button onclick="appendNumber('1')">1</button>
+  <button onclick="appendNumber('0')">0</button>
+  <!-- 他の数字ボタンも同様に追加可能 -->
+
+  <script>
+    // 数字を表示に追加する関数
+    function appendNumber(num) {
+      const display = document.getElementById('display');
+      display.value += num; // 追加（+=）で連続入力可能に
+    }
+  </script>
+
+</body>
+</html>
