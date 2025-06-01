@@ -9,8 +9,8 @@
 
 <form name="dentaku">
 
-    <input type="text" id="iti">
-    <input type="text" id="ni">
+    <input type="number" id="iti">
+    <input type="number" id="ni">
     <button>決定</button>
     <input type="text" id="result" readonly>
 </form>
@@ -23,10 +23,14 @@
         const button=document.querySelector("button")
         const result=document.querySelector("#result")
 
-        let keisan;
-        keisan=text1+text2;
-        console.log(keisan);
-        
+
+        function buttonpresseed(event){
+            
+            let keisan;
+            keisan=text1+text2;
+            console.log(keisan);
+            
+        }
 
         
 
