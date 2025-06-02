@@ -20,3 +20,4 @@ function buttonPresseed(event) {
 
 
 buttons.forEach(button => button.addEventListener('click',buttonPresseed))
+
