@@ -24,6 +24,15 @@ btn.addEventListener("click", ()=>{
         else if (calcSymbol.value="-") {
                 rlt.value=num1-num2
         }
+        else if (calcSymbol.value="*") {
+                rlt.value=num1*num2
+        }
+        else if (calcSymbol.value="/") {
+                rlt.value=num1/num2
+        }
+        else{
+                rlt.value="error"
+        }
         // console.log(No1.value + No2.value);
         // console.log(num1,num2);
         // rlt.value=parseInt(num1+calcSymbol.value+num2);
