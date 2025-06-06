@@ -17,16 +17,19 @@ btn.addEventListener("click", ()=>{
 
         const num1=parseInt(No1.value)
         const num2=parseInt(No2.value)
-        calcSymbol.value
 
+        if (calcSymbol.value="+") {
+                rlt.value=num1+num2
+        }
+        else if (calcSymbol.value="-") {
+                rlt.value=num1-num2
+        }
         // console.log(No1.value + No2.value);
         // console.log(num1,num2);
-        rlt.value=parseInt(num1+calcSymbol.value+num2);
+        // rlt.value=parseInt(num1+calcSymbol.value+num2);
         
     
         // rlt.value=num1 calcSymbol.value num2;
-
-
 
 
 
