@@ -1,4 +1,3 @@
-const numA=document.querySelectorAll(".num")
-const result=document.querySelector("#keisan")
+const btn=(document.querySelector.button)
 
-
+console.log(btn);
