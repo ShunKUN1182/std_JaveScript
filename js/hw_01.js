@@ -1,17 +1,19 @@
 // console.log("hiro");
 
-const btn = document.querySelectorAll(".btn");
 const result = document.querySelector("#result");
+const btn= document.querySelectorAll(".button");
+
 
 // console.log(btn);
 
-btn.addEventListener("click", ()=>{
 
-    console.log("good");
+// btn.array.forEach(function(target) {
+    
+// })
+
+// target.addEventListener("click", ()=>{
+
+//     console.log("good");
     
 
-
-
-
-
-})
+// })
