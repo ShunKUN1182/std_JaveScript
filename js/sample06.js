@@ -1,23 +1,29 @@
+// text.innerHTML = "あいう<br>えお";
 const text = document.querySelector("#text");
-
-
-text.innerHTML = "あいう<br>えお";
-
 const userName = document.querySelector("#name")
 const addBtn = document.querySelector("#addBtn")
 const memberLists = document.querySelector(".memberList>tbody")
 
 // console.log(userName,addBtn,memberLists);
 
-addBtn.addEventListener("click",() =>{
 
-    let memberList = "<tr>";
-    memberList += `<td>1</td>`;
-    memberList += `<td>${userName.value}</td>`;
-    memberList +="</tr>";
+addBtn.addEventListener("click",() =>{
     
-    memberLists.innerHTML+=memberList
-})
+        let memberList = `<tr class="btnClick">`;
+
+        const btnClick = document.querySelectorAll(".btnClick");
+
+
+        btnClick.forEach((v,i)=>{
+
+            
+            memberList += `<td>${i}</td>`;
+            memberList += `<td>${userName.value}</td>`;
+            memberList +="</tr>";
+            
+        })
+            memberLists.innerHTML+=memberList
+    })
 
 
 
