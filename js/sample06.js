@@ -16,7 +16,7 @@ addBtn.addEventListener("click",() =>{
     memberList += `<td>${userName.value}</td>`;
     memberList +="</tr>";
     
-    memberLists.innerHTML=memberList
+    memberLists.innerHTML+=memberList
 })
 
 
