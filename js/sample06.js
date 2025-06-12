@@ -8,13 +8,13 @@ const memberLists = document.querySelector(".memberList>tbody")
 
 let num = 0;
 
-function clk() {
-    num++;
-
-};
+// function clk() {
+    
+// };
 
 addBtn.addEventListener("click",() =>{
-      
+    
+    num++;
     let memberList = `<tr>`;
     memberList += `<td>${num}</td>`;
     memberList += `<td>${userName.value}</td>`;
