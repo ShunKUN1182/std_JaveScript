@@ -17,15 +17,12 @@ let num = 0;
 
 addBtn.addEventListener("click",() =>{
     
-
     num++;
     let memberList = `<tr>`;
     memberList += `<td>${num}</td>`;
     memberList += `<td>${userName.value}</td>`;
     memberList +=`<td width="75">`;
-    memberList +=`<button type=""button>`;
-    memberList +="リセット"
-    memberList +="</button>"
+    memberList +=`<input type="button" value="リセット${num}">`;
     memberList +="</td>"
     memberList +="</tr>";
     memberLists.innerHTML+=memberList
