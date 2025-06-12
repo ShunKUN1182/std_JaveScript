@@ -3,8 +3,11 @@ const text = document.querySelector("#text");
 const userName = document.querySelector("#name")
 const addBtn = document.querySelector("#addBtn")
 const memberLists = document.querySelector(".memberList>tbody")
-
+const allReset = document.querySelector("#allReset")
+ 
 // console.log(userName,addBtn,memberLists);
+console.log(allReset);
+
 
 let num = 0;
 
@@ -14,6 +17,7 @@ let num = 0;
 
 addBtn.addEventListener("click",() =>{
     
+
     num++;
     let memberList = `<tr>`;
     memberList += `<td>${num}</td>`;
@@ -23,6 +27,17 @@ addBtn.addEventListener("click",() =>{
     
 })
 
+allReset.addEventListener("click",()=>{
+
+    memberLists.innerHTML = "";
+    num = 0;
+
+})
+
+
+
+
+
 
 
 
@@ -30,7 +45,7 @@ addBtn.addEventListener("click",() =>{
 
 // 人を追加できるように（クリア！）
 // Noが毎回変わるようにする（くりあ！）
-// 全消しボタンの追加→tbodyは残す
+// 全消しボタンの追加→tbodyは残す(クリア！)
 // 個別削除の追加
 // 空の場合はエラー
 // 性別モードの実装
