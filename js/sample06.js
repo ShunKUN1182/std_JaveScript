@@ -20,13 +20,18 @@ const addList = ()=>{
     num++;
     let memberList = `<tr>`;
     memberList += `<td>${num}</td>`;
-    memberList += `<td>${userName.value.trim()}</td>`;
+    if(userName.value===""){
+        memberList += `<td>error</td>`;
+    } else{
+        memberList += `<td>${userName.value.trim()}</td>`;
+    }
     memberList +=`<td width="75">`;
     memberList +=`<input type="button" value="リセット${num}">`;
     memberList +="</td>"
     memberList +="</tr>";
     memberLists.innerHTML+=memberList
     userName.value = ""
+    
     
 }
 
@@ -63,6 +68,7 @@ allReset.addEventListener("click",()=>{
 // 人を追加できるように（クリア！）
 // Noが毎回変わるようにする（くりあ！）
 // 全消しボタンの追加→tbodyは残す(クリア！)
+//エンターで入力、送信でテキスト消える（クリア！）
 // 個別削除の追加
 // 空の場合はエラー
 // 性別モードの実装
