@@ -4,7 +4,7 @@ const userName = document.querySelector("#name")
 const addBtn = document.querySelector("#addBtn")
 const memberLists = document.querySelector(".memberList>tbody")
 const allReset = document.querySelector("#allReset")
- 
+
 // console.log(userName,addBtn,memberLists);
 console.log(allReset);
 
@@ -20,14 +20,21 @@ addBtn.addEventListener("click",() =>{
     num++;
     let memberList = `<tr>`;
     memberList += `<td>${num}</td>`;
-    memberList += `<td>${userName.value}</td>`;
+    memberList += `<td>${userName.value.trim()}</td>`;
     memberList +=`<td width="75">`;
-    memberList +=`<input type="button" value="リセット${num}">`;
+    memberList +=`<input id="resetBtn" type="button" value="リセット${num}">`;
     memberList +="</td>"
     memberList +="</tr>";
     memberLists.innerHTML+=memberList
+    // if{
+        
+    // }
     
 })
+
+const resetBtn = document.querySelector("#resetBtn")
+console.log(resetBtn);
+
 
 allReset.addEventListener("click",()=>{
 
