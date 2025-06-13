@@ -19,18 +19,21 @@ const addList = ()=>{
     
     num++;
     let memberList = `<tr>`;
-    memberList += `<td>${num}</td>`;
     if(userName.value===""){
-        memberList += `<td>error</td>`;
+        alert("人の名前を入れてください")
+        memberLists.innerHTML = "";
+        num = 0;
+
     } else{
+        memberList += `<td>${num}</td>`;
         memberList += `<td>${userName.value.trim()}</td>`;
+        memberList +=`<td width="75">`;
+        memberList +=`<input type="button" value="リセット${num}">`;
+        memberList +="</td>"
+        memberList +="</tr>";
+        memberLists.innerHTML+=memberList
+        userName.value = ""
     }
-    memberList +=`<td width="75">`;
-    memberList +=`<input type="button" value="リセット${num}">`;
-    memberList +="</td>"
-    memberList +="</tr>";
-    memberLists.innerHTML+=memberList
-    userName.value = ""
     
     
 }
