@@ -15,25 +15,33 @@ let num = 0;
     
 // };
 
-addBtn.addEventListener("click",() =>{
+const addList = ()=>{
     
     num++;
     let memberList = `<tr>`;
     memberList += `<td>${num}</td>`;
     memberList += `<td>${userName.value.trim()}</td>`;
     memberList +=`<td width="75">`;
-    memberList +=`<input id="resetBtn" type="button" value="リセット${num}">`;
+    memberList +=`<input type="button" value="リセット${num}">`;
     memberList +="</td>"
     memberList +="</tr>";
     memberLists.innerHTML+=memberList
-    // if{
-        
-    // }
+    userName.value = ""
     
+}
+
+addBtn.addEventListener("click",() =>{
+    addList()
 })
 
-const resetBtn = document.querySelector("#resetBtn")
-console.log(resetBtn);
+
+userName.addEventListener("keydown",(event)=>{
+    if (event.code==='Enter') {
+        addList()
+    }
+})
+
+
 
 
 allReset.addEventListener("click",()=>{
