@@ -4,9 +4,10 @@ const userName = document.querySelector("#name")
 const addBtn = document.querySelector("#addBtn")
 const memberLists = document.querySelector(".memberList>tbody")
 const allReset = document.querySelector("#allReset")
+const gerderSelect = document.querySelectorAll(".gerderSelect")
 
 // console.log(userName,addBtn,memberLists);
-console.log(allReset);
+console.log(gerderSelect);
 
 
 let num = 0;
@@ -74,5 +75,5 @@ allReset.addEventListener("click",()=>{
 // 全消しボタンの追加→tbodyは残す(クリア！)
 //エンターで入力、送信でテキスト消える（クリア！）
 // 個別削除の追加
-// 空の場合はエラー
+// 空の場合はエラー（クリア！）
 // 性別モードの実装
