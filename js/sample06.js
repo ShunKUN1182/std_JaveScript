@@ -29,7 +29,7 @@ const addList = ()=>{
         memberList += `<td>${num}</td>`;
         memberList += `<td>${userName.value.trim()}</td>`;
         memberList +=`<td width="75">`;
-        memberList +=`<input type="button" value="リセット">`;
+        memberList +=`<input type="button" value="リセット${num}">`;
         memberList +="</td>"
         memberList +="</tr>";
         memberLists.innerHTML+=memberList
