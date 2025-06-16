@@ -19,3 +19,9 @@ button{
     margin-bottom: 5px;
     background-color: antiquewhite;
 }
+
+tbody{
+    border: 1px solid #000;
+    background-color: antiquewhite;
+    color: #333;
+}
