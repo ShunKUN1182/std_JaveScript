@@ -50,9 +50,9 @@ playBtn.addEventListener("click",()=>{
     matchList += `</tr>`
     matchLists.innerHTML += matchList
 
-    let winPt = `<th>`
-    winPt += `100%`
-    winPt += `</th>`
-    winPt += `</tr>`
-    winPct.innerHTML += winPt
+    // let winPt = `<th>`
+    // winPt += `100%`
+    // winPt += `</th>`
+    // winPt += `</tr>`
+    // winPct.innerHTML += winPt
 })
