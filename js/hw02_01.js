@@ -20,8 +20,20 @@ playBtn.addEventListener("click",()=>{
     
     
     matchList += `<td>`
-    matchList += `${homeTeam.value} vs `
-    matchList += `${opponentTeam.value}`
+    if (homeTeam.value==="") {
+        alert("error");
+        matchLists.innerHTML = ""
+        winPct.innerHTML = ""
+    }else{
+        matchList += `${homeTeam.value} vs `  
+    }
+    if (opponentTeam.value==="") {
+        alert("error")
+        matchLists.innerHTML = ""
+        winPct.innerHTML = ""
+    }else{
+        matchList += `${opponentTeam.value}`
+    }
     matchList += `</td>`
     matchList += `<td>`
     matchList += `${randomA}-${randomB}`
@@ -38,8 +50,7 @@ playBtn.addEventListener("click",()=>{
     matchList += `</tr>`
     matchLists.innerHTML += matchList
 
-    let winPt = `<tr>`
-    winPt += `<th>`
+    let winPt = `<th>`
     winPt += `100%`
     winPt += `</th>`
     winPt += `</tr>`
