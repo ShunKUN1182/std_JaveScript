@@ -12,12 +12,12 @@ const matchLists = document.querySelector("#matchList>tbody")
 
 
 
-let randomA = Math.floor(Math.random()*11);
-let randomB = Math.floor(Math.random()*11);
-
-
 playBtn.addEventListener("click",()=>{
     let matchList = `<tr>`
+    let randomA = Math.floor(Math.random()*11);
+    let randomB = Math.floor(Math.random()*11);
+    
+    
     matchList += `<td>`
     matchList += `${homeTeam.value} vs `
     matchList += `${opponentTeam.value}`

@@ -1,4 +1,4 @@
-th{
+thead th{
     background-color: #07F;
     color: #FFF;
     width: 150px;
@@ -24,4 +24,8 @@ tbody{
     border: 1px solid #000;
     background-color: antiquewhite;
     color: #333;
+}
+
+tfoot th{
+    background-color: antiquewhite;
 }
