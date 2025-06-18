@@ -53,7 +53,7 @@ btn.forEach((e)=>{
     e.addEventListener("click", () =>{
         // console.log("btn");
         document.body.style.backgroundColor = e.value;
-     });  
+    });  
     
 })
 

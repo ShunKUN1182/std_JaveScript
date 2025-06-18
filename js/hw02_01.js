@@ -45,7 +45,7 @@ playBtn.addEventListener("click",()=>{
         alert("error");
         matchList = "";
     }
-    matchLists.innerHTML += matchList
+    matchLists.innerHTML += matchList.trim();
 
     const winP = document.querySelectorAll(".winP")
     const loseP = document.querySelectorAll(".loseP")
@@ -53,13 +53,11 @@ playBtn.addEventListener("click",()=>{
     
     console.log(winP,loseP,drowP);
     
-
     let winPt = `100%`
-    winPct.innerHTML += winPt 
+    winPct.innerHTML = winPt
     // let winPt = `<th>`
     // winPt += `100%`
     // winPt += `</th>`
     // winPt += `</tr>`
     // winPct.innerHTML += winPt
-
 })
