@@ -34,8 +34,9 @@ tfoot th{
     background-color: tomato;
 }
 .loseP{
-    background-color: #07F;
+    background-color:#00008B;
+    color: #FFF;
 }
 .drawP{
-    background-color: aquamarine;
+    background-color: #C0C0C0;
 }
