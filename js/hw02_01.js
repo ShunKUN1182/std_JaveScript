@@ -52,7 +52,7 @@ playBtn.addEventListener("click",()=>{
 
 
     let winPt = `100%`
-    winPt.innerHTML += winPct 
+    winPct.innerHTML += winPt 
     // let winPt = `<th>`
     // winPt += `100%`
     // winPt += `</th>`
