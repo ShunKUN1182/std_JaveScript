@@ -2,7 +2,7 @@ const homeTeam = document.querySelector("#homeTeam")
 const opponentTeam = document.querySelector("#opponentTeam")
 const playBtn = document.querySelector("#playBtn")
 const matchLists = document.querySelector("#matchList>tbody")
-const winPct = document.querySelector("#matchList>tfoot")
+const winPct = document.querySelector("#winPct")
 
 // console.log(homeTeam,opponentTeam,playBtn,matchList);
 
@@ -50,6 +50,9 @@ playBtn.addEventListener("click",()=>{
     matchList += `</tr>`
     matchLists.innerHTML += matchList
 
+
+    let winPt = `100%`
+    winPt.innerHTML += winPct 
     // let winPt = `<th>`
     // winPt += `100%`
     // winPt += `</th>`
