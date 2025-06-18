@@ -20,36 +20,39 @@ playBtn.addEventListener("click",()=>{
     
     
     matchList += `<td>`
-    if (homeTeam.value==="") {
-        alert("error");
-        matchLists.innerHTML = ""
-        winPct.innerHTML = ""
-    }else{
-        matchList += `${homeTeam.value} vs `  
-    }
-    if (opponentTeam.value==="") {
-        alert("error")
-        matchLists.innerHTML = ""
-        winPct.innerHTML = ""
-    }else{
-        matchList += `${opponentTeam.value}`
-    }
+    matchList += `${homeTeam.value} vs `  
+    matchList += `${opponentTeam.value}`
     matchList += `</td>`
     matchList += `<td>`
     matchList += `${randomA}-${randomB}`
     matchList += `</td>`
-    matchList += `<td>`
     if (randomA>randomB) {
+        matchList += `<td class="winP">`
         matchList +=`勝利`
     }else if (randomA<randomB) {
+        matchList += `<td class="loseP">`
         matchList +=`敗北`
     }else{
+        matchList += `<td class="drowP">`
         matchList +=`引き分け`
     }
     matchList += `</td>`
     matchList += `</tr>`
+    if (homeTeam.value === "") {
+        alert("error");
+        matchList = "";
+    }else if (opponentTeam.value === "") {
+        alert("error");
+        matchList = "";
+    }
     matchLists.innerHTML += matchList
 
+    const winP = document.querySelectorAll(".winP")
+    const loseP = document.querySelectorAll(".loseP")
+    const drowP = document.querySelectorAll(".drowP")
+    
+    console.log(winP,loseP,drowP);
+    
 
     let winPt = `100%`
     winPct.innerHTML += winPt 
@@ -58,4 +61,5 @@ playBtn.addEventListener("click",()=>{
     // winPt += `</th>`
     // winPt += `</tr>`
     // winPct.innerHTML += winPt
+
 })
