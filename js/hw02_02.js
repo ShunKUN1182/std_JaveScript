@@ -24,11 +24,11 @@ totalResults["draw"]=0;
 
 
 
-
 playBtn.addEventListener("click",()=>{
-    while(totalMatch > 0){
-        console.log("残り:",totalMatch);
-        
+
+while(totalMatch > 0){
+    console.log("残り:",totalMatch);
+    
         
         let randomA = Math.floor(Math.random()*11);
         let randomB = Math.floor(Math.random()*11);
