@@ -1,0 +1,41 @@
+thead th{
+    background-color: #07F;
+    color: #FFF;
+    width: 150px;
+    height: 15px;
+    padding: 10px;
+}    
+
+input{
+    margin-bottom: 10px;
+    margin-top: 5px;
+}    
+
+#matchList{
+    border: 1px solid #000;
+}
+
+button{
+    margin-bottom: 5px;
+    background-color: antiquewhite;
+}
+
+tbody{
+    border: 1px solid #000;
+    background-color: antiquewhite;
+    color: #333;
+}
+
+tfoot th{
+    background-color: antiquewhite;
+}
+
+.winP{
+    background-color: tomato;
+}
+.loseP{
+    background-color: #07F;
+}
+.drowP{
+    background-color: aquamarine;
+}

@@ -10,8 +10,11 @@ const winPct = document.querySelector("#winPct")
 
 // console.log(random);
 // ↑これで０〜１の乱数ができる、これに最大値をかけて使う
-
-
+let totalMatch = 10;
+while(totalMatch > 0){
+    console.log("残り",totalMatch);
+    totalMatch--;
+}
 
 playBtn.addEventListener("click",()=>{
     let matchList = `<tr>`
@@ -55,9 +58,4 @@ playBtn.addEventListener("click",()=>{
     
     let winPt = `100%`
     winPct.innerHTML = winPt
-    // let winPt = `<th>`
-    // winPt += `100%`
-    // winPt += `</th>`
-    // winPt += `</tr>`
-    // winPct.innerHTML += winPt
 })

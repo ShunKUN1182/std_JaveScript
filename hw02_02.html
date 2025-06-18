@@ -6,15 +6,16 @@
     <title>
         野球のスコアシュミレーション
     </title>
-    <link rel="stylesheet" href="css/hw02_01.css">
+    <link rel="stylesheet" href="css/hw02_02.css">
 </head>
 <body>
-    <p>自分のチーム名：<input type="text" id="homeTeam"></p>
-    <p>対戦相手：<input type="text" id="opponentTeam"></p>
+    <p>自分のチーム名：<input type="text" id="homeTeam" value="orix"></p>
+    <p>対戦相手：<input type="text" id="opponentTeam" value="lions"></p>
     <p><button type="button" id="playBtn">プレイボール</button></p>
     
     <table id="matchList">
         <thead>
+            <th>試合数</th>
             <th>チーム名</th>
             <th>試合結果</th>
             <th>勝敗</th>
@@ -24,10 +25,16 @@
         </tbody>
         <tfoot>
             <tr>
-                <th colspan="2">
-                    自分の勝率
+                <th>
+                    自分の勝率：
                 </th>
                 <th id="winPct">
+                </th>
+                <th>
+                    勝敗数：
+                </th>
+                <th>
+                    85勝32敗1分
                 </th>
             </tr>
         </tfoot>
