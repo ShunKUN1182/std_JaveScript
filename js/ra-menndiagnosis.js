@@ -15,36 +15,36 @@ btn.addEventListener("click",()=>{
     if (q1[0].checked === true) {
         if (q2[0].checked === true) {
             if (q3[0].checked === true) {
-                result.innerHTML = "鳥の鶏次";
+                result.innerHTML = "鳥の鶏次です";
                 img.innerHTML = `<img src="images/keiji.jpg" alt="鳥の鶏次">`
             }else{
-                result.innerHTML = "無鉄砲";
+                result.innerHTML = "無鉄砲です";
                 img.innerHTML = `<img src="images/muteppou.jpg" alt="無鉄砲">`
             }
         }else{
             if (q3[0].checked === true) {
-                result.innerHTML = "ラーメン人生jet";
+                result.innerHTML = "ラーメン人生jetです";
                 img.innerHTML = `<img src="images/jinsei.webp" alt="ラーメン人生jit">`
             }else{
-                result.innerHTML = "たけ井";
+                result.innerHTML = "たけ井です";
                 img.innerHTML = `<img src="images/takei.webp" alt="たけい">`
             }
         }
     }else{
         if (q2[0].checked === true) {
             if (q3[0].checked === true) {
-                result.innerHTML = "ニューヨーク×ニューヨーク";
+                result.innerHTML = "ニューヨーク×ニューヨークです";
                 img.innerHTML = `<img src="images/newyork.jpg" alt="ニューヨーク">`
             }else{
-                result.innerHTML = "カドヤ食堂";
+                result.innerHTML = "カドヤ食堂です";
                 img.innerHTML = `<img src="images/kadoya.jpg" alt="カドヤ">`
             }
         }else{
             if (q3[0].checked === true) {
-                result.innerHTML = "坂本龍馬が愛したラーメン食堂";
+                result.innerHTML = "坂本龍馬が愛したラーメン食堂です";
                 img.innerHTML = `<img src="images/ryouma.webp" alt="龍馬">`
             }else{
-                result.innerHTML = "燃えよ麺助"
+                result.innerHTML = "燃えよ麺助です"
                 img.innerHTML = `<img src="images/moeyo.jpg" alt="燃えよ">`
                 
             }
