@@ -2,7 +2,7 @@ const btn = document.querySelector("#btn");
 let q1 = document.getElementsByName("q1");
 const q2 = document.getElementsByName("q2");
 const q3 = document.getElementsByName("q3");
-const result = document.querySelector("h3");
+const result = document.querySelector("h4");
 
 // console.log(q1,q2,q3,btn);
 
@@ -13,15 +13,15 @@ btn.addEventListener("click",()=>{
     if (q1[0].checked === true) {
         if (q2[0].checked === true) {
             if (q3[0].checked === true) {
-                console.log("天下一品");
+                result.innerHTML = "鳥の鶏次"
             }else{
-                console.log("燃えよメンスケ");
+                result.innerHTML = "無鉄砲"
             }
         }else{
             if (q3[0].checked === true) {
-                console.log("人類みな麺類");
+                result.innerHTML = "ラーメン人生jet"
             }else{
-                console.log("小麦の女神");
+                result.innerHTML = "小麦の麺神"
             }
         }
     }else{
