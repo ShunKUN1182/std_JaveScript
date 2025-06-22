@@ -1,3 +1,7 @@
+body{
+    background-image: url(images/ra-menn);
+}
+
 input{
     margin: 10px;
 }
@@ -7,3 +11,6 @@ button{
     margin-top: 20px;
 }
 
+h4{
+    font-size: 35px;
+}
