@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>九九表</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .header{
+      padding: 1rem;
+    }
+    h1{
+      font-size: 1.8em;
+    }
+    table,th,td{
+      border: solid 1px #999;
+    }
+    table{
+      border-collapse: collapse;
+      width: 800px;
+      margin: 20px auto 0;
+    }
+    td{
+      padding: 1em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>九九表</h1>
+    <p>
+      下記toby要素の中に 九九表をjavascriptで完成させてください。<br>
+      作る時の制約・ルール<br>
+      ・for文を使うこと<br>
+      ・tr td をJavaScript上で作成し、追加すること<br>
+      ・掛け算の値の文字を直接入れることはNG<br>
+      おまけ（CSS）<br>
+      ・step1 マウスカーソルを各数字に乗せるとそのセルの背景の色が変わる様に変更する<br>
+      ・step2 マウスカーソルを各数字に乗せるとその行・列（縦横）の背景の色が変わる様に変更する<br>
+      「ヒント」 擬似クラスに :hover があるので、それを使って考えてみましょう
+    </p>
+  </div>
+  <table id="timesTable">
+    <tbody>
+      <!-- 下記1の段の例　これを９の段まで作成する　例なのでコメント（または削除）して実施しましょう -->
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+
+    </tbody>
+  </table>
+  <script src="js/sample07.js"></script>
+</body>
+</html>
