@@ -3,36 +3,40 @@ const tableA = document.querySelector("#timesTable>tbody");
 
 btn.addEventListener("click",()=>{
     
-    for (let i = 1; i < 10; i++) {
+    let tableB = `<tr class="top">`;
+    tableB += "<td>";
+    tableB += `×`;
+    tableB += "</td>";
+    tableB += "<td>";
+    tableB += `1`;
+    tableB += "</td>";
+    tableB += "<td>";
+    tableB += `2`;
+    tableB += "</td>";
+    tableB += "<td>";
+    tableB += `3`;
+    tableB += "</td>";
+    tableB += "<td>";
+    tableB += `4`;
+    tableB += "</td>";
+    tableB += "<td>";
+    tableB += `5`;
+    tableB += "</td>";
+    tableB += "<td>";
+    tableB += `6`;
+    tableB += "</td>";
+    tableB += "<td>";
+    tableB += `7`;
+    tableB += "</td>";
+    tableB += "<td>";
+    tableB += `8`;
+    tableB += "</td>";
+    tableB += "<td>";
+    tableB += `9`;
+    tableB += "</td>";
+    tableA.innerHTML += tableB
 
-        let tableB = `<tr class="top">`;
-        tableC += "<td>";
-        tableC += `1`;
-        tableC += "</td>";
-        tableC += "<td>";
-        tableC += `2`;
-        tableC += "</td>";
-        tableC += "<td>";
-        tableC += `3`;
-        tableC += "</td>";
-        tableC += "<td>";
-        tableC += `4`;
-        tableC += "</td>";
-        tableC += "<td>";
-        tableC += `5`;
-        tableC += "</td>";
-        tableC += "<td>";
-        tableC += `6`;
-        tableC += "</td>";
-        tableC += "<td>";
-        tableC += `7`;
-        tableC += "</td>";
-        tableC += "<td>";
-        tableC += `8`;
-        tableC += "</td>";
-        tableC += "<td>";
-        tableC += `9`;
-        tableC += "</td>";
+    for (let i = 1; i <= 9; i++) {
 
 
         let tableC = "<tr>";
