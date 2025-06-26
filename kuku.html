@@ -5,17 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>クク表</title>
     <style>
-        table{
-            border: solid 1px #000;
-        }
-        th,td{
-            border: solid 1px #000;
-            width: 75px;
-            height: 75px;
-        }
-        .top,.left{
-            background-color: #DDD;
-        }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .header{
+        padding: 1rem;
+    }
+    h1{
+        font-size: 1.8em;
+    }
+    table,th,td{
+        border: solid 1px #999;
+    }
+    table{
+        border-collapse: collapse;
+        width: 800px;
+        margin: 20px auto 0;
+    }
+    td{
+        padding: 1em;
+        text-align: center;
+    }
+    .top{
+        background-color: #DDD;
+
+    }
+    .left{
+        background-color: #DDD;
+    }
+    tr:hover td{
+        background-color: aqua;
+    }
+    tr td:hover{
+        background-color: tomato;
+    }
     </style>
 </head>
 <body>
