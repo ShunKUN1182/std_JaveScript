@@ -1,5 +1,6 @@
 const btn = document.querySelector("#btn");
 const tableA = document.querySelector("#timesTable>tbody");
+const tableD = document.querySelector("#timesTable>thead")
 
 btn.addEventListener("click",()=>{
     
@@ -34,7 +35,7 @@ btn.addEventListener("click",()=>{
     tableB += "<td>";
     tableB += `9`;
     tableB += "</td>";
-    tableA.innerHTML += tableB
+    tableD.innerHTML += tableB
 
     for (let i = 1; i <= 9; i++) {
 
