@@ -38,8 +38,10 @@ btn.addEventListener("click",()=>{
     tableD.innerHTML += tableB
 
     for (let i = 1; i <= 9; i++) {
+        
+        for(){
 
-
+        }
         let tableC = "<tr>";
         tableC += `<td class="left">`;
         tableC += `${i}`;
