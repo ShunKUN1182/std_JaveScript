@@ -39,9 +39,9 @@ btn.addEventListener("click",()=>{
 
     for (let i = 1; i <= 9; i++) {
         
-        for(){
+        // for(){
 
-        }
+        // }
         let tableC = "<tr>";
         tableC += `<td class="left">`;
         tableC += `${i}`;
