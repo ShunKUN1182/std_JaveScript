@@ -7,14 +7,14 @@ let tableB = "";
 btn.addEventListener("click",()=>{
 
 
-    for (let i = 1; i => 9; i++){
+    for (let i = 1; i <= 9; i++){
 
         tableB += `<tr>`;
         tableB += `<td class="left">`;
         tableB += `${i}`;
         tableB += `</td>`;
 
-        for(let j = 1; j => 9; j++){
+        for(let j = 1; j <= 9; j++){
             
             tableB += `<td>`;
             tableB += `${i*j}`;
@@ -24,7 +24,7 @@ btn.addEventListener("click",()=>{
         
         tableB += `</tr>`;
     }
-
-tableA.innerHTML += tableB;
+    
+    tableA.innerHTML += tableB;
 
 })
