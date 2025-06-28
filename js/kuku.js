@@ -33,8 +33,8 @@ btn.addEventListener("click",()=>{
     tableA.innerHTML += tableB;
     // style.innerHTML += tableC
 
-    for (let k = 1; k <= 9; k++) {
-        const a = document.querySelectorAll(`.a${k}`) 
-    }
+    // for (let k = 1; k <= 9; k++) {
+    //     const a = document.querySelectorAll(`.a${k}`) 
+    // }
 
 })
