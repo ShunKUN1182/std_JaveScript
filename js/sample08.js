@@ -20,6 +20,12 @@ js の sort を使って実現
 */
 
 
+
+randomNumber.sort();
+
+console.log(randomNumber);
+
+
 /*
 step2
 配列操作で自作する
