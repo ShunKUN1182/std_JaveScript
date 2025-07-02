@@ -11,7 +11,7 @@ while(setNums.size<maxNum){
 // randomNumber配列をsetNumsからコピー
 const randomNumber = [...setNums];
 
-const sortNumber = [];
+let sortNumber = [];
 
 console.log("ランダムな数字",randomNumber);
 /*
@@ -21,9 +21,13 @@ js の sort を使って実現
 
 
 
-randomNumber.sort();
+randomNumber.sort()
 
-console.log(randomNumber);
+sortNumber = randomNumber
+
+
+
+console.log("並び替えたあとの数字",sortNumber);
 
 
 /*
@@ -31,5 +35,4 @@ step2
 配列操作で自作する
 */
 
-console.log("並び替えたあとの数字",sortNumber);
 
