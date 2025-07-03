@@ -39,15 +39,15 @@ js の sort を使って実現
 // btn.addEventListener("tap", newWin);
 
 
-randomNumber.sort((a,b)=>a-b);
+// randomNumber.sort((a,b)=>a-b);
 
 // randomNumber.sort((a,b)=>{
 //     return a - b;
 // })
 
-sortNumber = randomNumber
+// sortNumber = randomNumber
 
-console.log("並び替えたあとの数字",sortNumber);
+// console.log("並び替えたあとの数字",sortNumber);
 
 
 /*
@@ -56,3 +56,7 @@ step2
 */
 
 
+for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    
+}
