@@ -20,12 +20,32 @@ js の sort を使って実現
 */
 
 
+// function compareFn(a,b){
+//     return a-b;
+// }
 
-randomNumber.sort()
+
+// function (){
+    
+// }
+
+// ()=>{
+//     a = b + c;
+//     return a;
+// }
+// () => a
+
+// btn.addEventListener("click",newWin);
+// btn.addEventListener("tap", newWin);
+
+
+randomNumber.sort((a,b)=>a-b);
+
+// randomNumber.sort((a,b)=>{
+//     return a - b;
+// })
 
 sortNumber = randomNumber
-
-
 
 console.log("並び替えたあとの数字",sortNumber);
 
