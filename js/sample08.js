@@ -56,7 +56,6 @@ step2
 */
 
 
-for (let i = 0; i < array.length; i++) {
-    const element = array[i];
+for (let i = 0; i < randomNumber.length; i++) {
     
 }
