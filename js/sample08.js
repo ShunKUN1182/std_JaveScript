@@ -56,6 +56,12 @@ step2
 */
 
 
-for (let i = 0; i < randomNumber.length; i++) {
-    
+for (let i = 0; i <= randomNumber.length; i++) {
+    if (randomNumber[0] > randomNumber[1]){
+        randomNumber[0] = randomNumber[1]
+    }else{
+        randomNumber[0] = sortNumber
+    }
 }
+
+console.log(sortNumber);
