@@ -62,6 +62,6 @@ for (let i = 0; i <= randomNumber.length; i++) {
     }else{
         randomNumber[0] = sortNumber
     }
-}
+};
 
 console.log(sortNumber);
