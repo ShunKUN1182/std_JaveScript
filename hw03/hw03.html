@@ -10,18 +10,55 @@
     <div id="content">
         <header>
             <h1>好きなアーティスト</h1>
-            <button type="">絞り込み</button>
-            <button type="">並び替え</button>
-            <button type="">初期化</button>
+            <ul>
+                <li>
+                    <select name="aperture" id="aperture">
+                        <option value="none">絞り込み</option>
+                    </select>
+                </li>
+                <li>
+                    <select name="sort" id="sort">
+                        <option value="none">並び替え</option>
+                    </select>
+                </li>
+                <li>
+                    <select name="reseat" id="reseat">
+                        <option value="none">リセット</option>
+                    </select>
+                </li>
+            </ul>
         </header>
         <main>
-            <div>
-                <img src="" alt="曲のジャケ写">
-                <h2>曲名</h2>
-                <p>説明文が入るんですよねここには、本当にこの曲はいい曲で素敵なんすわ！！
+            <div class="songContent">
+                <img src="images/nissy_01.jpg" alt="ジャケ写">
+                <div class="songWrap">
+                <h2 class="songName">SLAVE</h2>
+                    <p class="artistName">Nissy</p>
+                </div>
+                <p>Nissy Entertainment Re：10th Anniversaryの一曲目を飾った曲
                 </p>
-                <p>アーティスト名が入るよ</p>
             </div>
+
+            <div class="songContent">
+                <img src="images/nissy_02.jpeg" alt="ジャケ写">
+                <div class="songWrap">
+                <h2 class="songName">The Days</h2>
+                    <p class="artistName">Nissy</p>
+                </div>
+                <p>Nissyのライブでは毎回usjの仲間達が来てくれて一緒に踊ってくれる曲！
+                </p>
+            </div>
+
+            <div class="songContent">
+                <img src="images/nissy_03.avif" alt="ジャケ写">
+                <div class="songWrap">
+                <h2 class="songName">トリコ</h2>
+                    <p class="artistName">Nissy</p>
+                </div>
+                <p>Nissyの曲の中で一番有名な曲でTikTokでも流行った楽しい曲！
+                </p>
+            </div>
+
         </main>
     </div>
     <script src="js/hw03.js"></script>

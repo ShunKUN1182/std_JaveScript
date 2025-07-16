@@ -4,13 +4,67 @@
 }
 
 #content{
-    display: flex;
     width: 500px;
-    margin: 20px;
     padding: 5px;
+    margin: 10px 30px;
 }
 
-#body{
-    padding: 0 0 0 0 ;
-    margin: 0 10;
+
+header{
+
+}
+
+header h1{
+    width: 500px;
+    font-size: 20px;
+
+}
+
+header ul{
+    list-style-type: none;
+    display: flex;
+    width: 500px;
+    height: 50px;
+    margin: 10px;
+}
+
+header li{
+    width: 150px;
+    height: 50px;
+}
+
+main img{
+    width: 200px;
+    height: 200px;
+}
+
+main p{
+    width: 200px;
+    font-size: 14px;
+}
+
+main .songName{
+    font-size: 18px;
+}
+
+main .artistBox{
+}
+
+
+main .artistName{
+    font-size: 16px;
+    color: #2200CC;
+    margin-bottom: 5px;
+}
+
+main .songContent{
+    border: 1px dotted #555;
+    width: 200px;
+    padding: 10px 10px 20px;
+    margin-right: 10px;
+}
+
+main{
+    display: flex;
+    flex: content;
 }
