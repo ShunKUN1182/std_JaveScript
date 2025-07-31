@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.sliderWrap{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.sliderWrap ul{
+    width: 1200px;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+}
+
+.sliderWrap li{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.sliderWrap li:nth-child(1){
+    z-index: 3;
+}
+.sliderWrap li:nth-child(2){
+    z-index: 2;
+}.sliderWrap li:nth-child(3){
+    z-index: 1;
+}
