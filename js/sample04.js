@@ -16,11 +16,12 @@ A＝＝B 同じ
 A!=B 同じじゃない
 A>B
 A<B
-A>=B　以上
-A<=B　以下
+A>=B 以上
+A<=B 以下
+|| 〇〇 or という意味
+&& 〇〇 かつという意味
 */
 
-// 
 if( age>=0 && age<=12){
     console.log("子供でちゅね");
 }
@@ -29,16 +30,10 @@ else if (age>=13 && age<=15) {
 }
 else if (age==20) {
     console.log("成人おめでとう");
-    
 }
 else if (age<0 || age>=101) {
     console.log("人間ですか？");
-    
 }
-
-
-
 else{
     console.log("数字入れろ");
-    
 }
