@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おべんきょう</title>
+</head>
+<body>
+    <input type="text" id="leftText">
+    <select id="operatorSelect">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" id="rightText">
+    <button type="button" id="btn">計算する</button>
+    <input type="text" id="result" readonly>
+
+    <script>
+        const leftText = document.getElementById("leftText");
+        const rightText = document.getElementById("rightText");
+        const btn = document.getElementById("btn");
+        const result = document.getElementById("result");
+
+        btn.onclick = ()=>{
+            const leftNum = Number(leftText.value);
+            const rightNum = Number(rightText.value);
+            result.value = leftNum + rightNum;
+        };
+    </script>
+</body>
+</html>

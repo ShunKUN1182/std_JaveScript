@@ -1,17 +1,17 @@
-// console.log("hiro");
-
+const btns = document.querySelectorAll(".button");
 const result = document.querySelector("#result");
-const buttons = document.querySelectorAll(".button");
-
-buttons.forEach(target =>{
-
-target.addEventListener("click",() =>{
-
-console.log(buttons.value);
 
 
 
-})
 
-})
-
+btns.forEach(e => {
+    e.addEventListener("click" , ()=>{
+        if (e.value == "=") {
+            result.value = eval(result.value);
+        }else if (e.value == "c") {
+            result.value = "";
+        }else{
+            result.value += e.value;
+        }
+    })
+});
