@@ -1,9 +1,6 @@
 const btns = document.querySelectorAll(".button");
 const result = document.querySelector("#result");
 
-
-
-
 btns.forEach(e => {
     e.addEventListener("click" , ()=>{
         if (e.value == "=") {
@@ -15,3 +12,37 @@ btns.forEach(e => {
         }
     })
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

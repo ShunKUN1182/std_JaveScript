@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>バトルゲーム</title>
+    <style>
+        #playerSelect{
+            display: block;
+            margin: 20px auto;
+        }
+        button{
+            width: 100px;
+            border-radius: 20px;
+            background-color: bisque;
+            margin: 10px 47.5%;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="selectBox">
+        <p>行動を選んでボタンを押そう！</p>
+        <select id="playerSelect">
+            <option value="こうげき">こうげき</option>
+            <option value="ぼうぎょ">ぼうぎょ</option>
+            <option value="ためる">ためる</option>
+            <option value="クリティカルこうげき">クリティカルこうげき</option>
+            <option value="クリティカルぼうぎょ">クリティカルぼうぎょ</option>
+        </select>
+    </div>
+    
+    <button type="button" id="btn">決定</button>
+
+    <div id="log">
+        <p>バトルログ</p>
+    </div>
+
+    <script src="js/battle.js" id="btn"></script>
+</body>
+</html>
