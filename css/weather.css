@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    gap: 69vw;
+    margin: 30px 50px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 50px;
+    list-style-type: none;
+}
+
+header nav ul li {
+    font-size: 16px;
+}
+
+a:visited ,
+a:link {
+    text-decoration: none;
+    color: #000;
+}
+
+main{
+    margin: 50px;
+}
+
+img{
+    width: 70px;
+    height: 70px;
+}
+
+h2{
+    font-size: 24px;
+}    
+
+#nowWeather{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.Data{
+    border: solid 1px #000;
+    padding: 10px;
+    margin: 10px;
+}    
+
+.weatherData{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}    
+
+
+.maxTemp{
+    color: red;
+}    
+
+.minTemp{
+    color: blue;
+}    
+
+.minTemp , .maxTemp {
+    font-size: 18px;
+    font-weight: 600;
+}    
+
+.timeMap{
+    display: flex;
+    gap: 15px;
+    margin: 5px 0;
+    align-items: center;
+}    
+
+.timeMap h3{
+    font-size: 24px;
+}    
+
+.timeMap h4{
+    font-size: 14px;
+}    
+
