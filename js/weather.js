@@ -8,6 +8,8 @@ const month = document.querySelectorAll(".month");
 const day = document.querySelectorAll(".day");
 const hours = document.querySelectorAll(".hours");
 let date = new Date()
+console.log(date);
+
 
 const url = "https://api.openweathermap.org/data/2.5/weather?";
 const appid = "15da96b2fae8092bcfef32eaac4baa79";
@@ -24,12 +26,12 @@ const nagoyalat = "35.180122960051264";
 const nagoyalon = "136.906384224774";
 const yokohamalat = "35.44534107716856";
 const yokohamalon = "139.6465455082567";
-const fukuokalat = "33.593501552221795";
-const fukuokalon = "130.38339024088972";
+const fukuokalat = "33.59006969569004";
+const fukuokalon = "130.40810947713226";
 const sapporolat = "43.07102676672054";
 const sapporolon = "141.4404659830317";
-const kobelat = "34.72109794662121";
-const kobelon = "135.08658883859303";
+const kobelat = "34.6907154891843";
+const kobelon = "135.19467224742309";
 
 // const osaka = `${url}lat=${osakalat}&lon=${osakalon}&appid=${appid}&units=${units}&lang=${lang}`;
 // const tokyo = `${url}lat=${tokyolat}&lon=${tokyolon}&appid=${appid}&units=${units}&lang=${lang}`;
@@ -46,7 +48,7 @@ const citys = [
     `${url}lat=${kobelat}&lon=${kobelon}&appid=${appid}&units=${units}&lang=${lang}`,
 ];
 
-for(let i = 0; i < cityName.length; i++){
+for(let i = 0; i < citys.length; i++){
     fetch(citys[i],{
         mode: 'cors',
         cache: 'no-store',
@@ -57,7 +59,7 @@ for(let i = 0; i < cityName.length; i++){
         cityWeather[i].textContent = data.weather[0].description;
         maxTemp[i].textContent = data.main.temp_max;
         minTemp[i].textContent = data.main.temp_min;
-        month[i].textContent = date.getMonth();
+        month[i].textContent = date.getMonth() + 1;
         day[i].textContent = date.getDate();
         hours[i].textContent = date.getHours();
         console.log(data);
