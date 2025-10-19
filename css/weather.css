@@ -5,24 +5,24 @@
 
 header {
     display: flex;
-    margin: 30px 50px;
-    justify-content: space-between;
+    margin: 30px 50px 10px;
+    justify-content: space-around;
 }
 
 header nav ul {
     display: flex;
     gap: 50px;
     list-style-type: none;
+    width: 300px;
 }
 
 header nav ul li {
     font-size: 16px;
 }
 
-
 header img {
     min-width: none;
-    width: 70%;
+    width: 100%;
 }
 
 a:visited ,
@@ -36,8 +36,8 @@ main{
 }
 
 .weatherData img{
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
 }
 
 h2{
@@ -104,6 +104,61 @@ h2{
 .timeMap h4{
     font-size: 14px;
 }    
+
+.addWeather {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+    align-items: center;
+}
+
+.addNum {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.addNum input {
+    width: 150px;
+    height: 20px;
+    border-radius: 5px;
+    border: #555 solid 0.5px;
+}
+
+.addNum p {
+    font-size: 12px;
+}
+
+.addWeather button {
+    background-color: rgb(78, 177, 238);
+    border: solid 1px #333;
+    border-radius: 10px;
+    width: 250px;
+    height: 40px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.addWeather button :hover {
+    letter-spacing: 0.15em;
+    background-color: rgb(198, 236, 255);
+}
+
+.addWeatherWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.addWeatherWrap h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
 
 footer{
     display: flex;
