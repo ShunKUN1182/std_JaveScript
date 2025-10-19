@@ -10,7 +10,6 @@ const hours = document.querySelectorAll(".hours");
 let date = new Date()
 console.log(date);
 
-
 const url = "https://api.openweathermap.org/data/2.5/weather?";
 const appid = "15da96b2fae8092bcfef32eaac4baa79";
 const units = "metric";
@@ -62,7 +61,8 @@ for(let i = 0; i < citys.length; i++){
         month[i].textContent = date.getMonth() + 1;
         day[i].textContent = date.getDate();
         hours[i].textContent = date.getHours();
-        console.log(data);
+        imgs[i].outerHTML = `<img src="images/${data.weather[0].icon}.png" alt="天気アイコン">`
+        console.log(data.weather[0].icon);
     })
 }
 
