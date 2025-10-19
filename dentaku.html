@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dentaku</title>
+    <style>
+        body {
+            color: #fff;
+            font-weight: bold;
+            background-color: #111;
+        }
+        table {
+            width: 400px;
+            height: 550px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 100px auto;
+            gap: 25px;
+            border: #fff solid 1px;
+        }
+        tbody {
+            display: flex;
+            flex-direction: column;
+        }
+        tbody tr {
+            display: flex;
+        }
+        thead tr td input {
+            width: 300px;
+            height: 65px;
+            font-weight: bold;
+            text-align: right;
+            font-size: 30px;
+        }
+        tbody tr td button {
+            width: 75px;
+            height: 75px;
+            background-color: #505050;
+            border: none;
+            border-radius: 50px;
+            color: #fff;
+            transition: 0.3s;
+            margin: 3px;
+            font-size: 30px;
+        }
+        tbody tr td button:hover {
+            background-color: #D4D4D2;
+        }
+        .operator {
+            background-color: #FF9500;
+            font-weight: normal;
+        }
+        .operator:hover {
+            background-color: #ffcb83;
+        }
+        .submit {
+            background-color: #7d7d7d;
+        }
+    </style>
+    <script src="js/dentaku.js" defer></script>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>
+                    <input type="text" readonly>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <button type="button">7</button>
+                </td>
+                <td>
+                    <button type="button">8</button>
+                </td>
+                <td>
+                    <button type="button">9</button>
+                </td>
+                <td>
+                    <button type="button" class="operator">÷</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button">4</button>
+                </td>
+                <td>
+                    <button type="button">5</button>
+                </td>
+                <td>
+                    <button type="button">6</button>
+                </td>
+                <td>
+                    <button type="button" class="operator">×</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button">1</button>
+                </td>
+                <td>
+                    <button type="button">2</button>
+                </td>
+                <td>
+                    <button type="button">3</button>
+                </td>
+                <td>
+                    <button type="button" class="operator">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" class="submit">=</button>
+                </td>
+                <td>
+                    <button type="button">0</button>
+                </td>
+                <td>
+                    <button type="button" class="submit">c</button>
+                </td>
+                <td>
+                    <button type="button" class="operator">+</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

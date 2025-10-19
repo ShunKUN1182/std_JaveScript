@@ -58,9 +58,21 @@ function timeCheck() {
     if ( nowHours <= 5 && nowHours >= 14 ) {
         colorChange.style.backgroundImage = `linear-gradient( 173deg, #e0feff, #30bff8 )`
         colorChange.style.color = "#000";
+        textChanges.forEach(e => {
+            e.style.color = "#000"
+        });
+        borderChanges.forEach(ele => {
+            ele.style.border = "solid 1px #000"
+        });
     }else if ( nowHours <= 15 && nowHours >= 18 ) {
         colorChange.style.backgroundImage = `linear-gradient( 315deg, #ffb347, #ffcccb )`
         colorChange.style.color = "#000";
+        textChanges.forEach(e => {
+            e.style.color = "#000"
+        });
+        borderChanges.forEach(ele => {
+            ele.style.border = "solid 1px #000"
+        });
     }else{
         colorChange.style.backgroundImage = `linear-gradient( 345deg, #0a1635, #142850, #1e3c72, #274690 )`
         colorChange.style.color = "#fff";
@@ -92,9 +104,7 @@ function cityDate() {
             console.log(data.weather[0].icon);
         })
     }
-}
-
-
+};
 
 btn.addEventListener("click" , ()=>{
     let addLat = latData.value;
@@ -126,13 +136,12 @@ btn.addEventListener("click" , ()=>{
     date = new Date()
 
     cityDate();
-
     timeCheck();
-})
-
+});
 
 cityDate();
 timeCheck();
+
 // fetch(osaka,{
 //     mode: 'cors',
 //     cache: 'no-store',
@@ -180,4 +189,3 @@ timeCheck();
 //     img.innerHTML = `<img src="../images/${iconData}.png" alt="天気アイコン">`;
 //     console.log(img);
 // };
-
