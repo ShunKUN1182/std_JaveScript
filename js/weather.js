@@ -61,7 +61,7 @@ for(let i = 0; i < citys.length; i++){
         month[i].textContent = date.getMonth() + 1;
         day[i].textContent = date.getDate();
         hours[i].textContent = date.getHours();
-        imgs[i].outerHTML = `<img src="images/${data.weather[0].icon}.png" alt="天気アイコン">`
+        imgs[i].outerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="天気アイコン">`
         console.log(data.weather[0].icon);
     })
 }
