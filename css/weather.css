@@ -101,7 +101,7 @@ h2{
 }    
 
 .addWeather {
-    margin-top: 20px;
+    margin: 20px;
     display: flex;
     justify-content: center;
     gap: 75px;
@@ -153,6 +153,20 @@ h2{
 .addWeatherWrap h2 {
     font-size: 18px;
     font-weight: 600;
+}
+
+@media screen and (max-width: 900px) {
+    button{
+        width: 150px;
+        font-size: 10px;
+        height: 25px;
+    }
+    input{
+        width: 100px;
+    }
+    .addNum p {
+        font-size: 9px;
+    }
 }
 
 footer{

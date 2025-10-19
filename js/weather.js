@@ -6,12 +6,16 @@ let imgs = document.querySelectorAll(".weatherData > img");
 let month = document.querySelectorAll(".month");
 let day = document.querySelectorAll(".day");
 let hours = document.querySelectorAll(".hours");
+let borderChanges = document.querySelectorAll(".Data")
 let date = new Date()
 
 const btn = document.querySelector("button");
 const latData = document.querySelector("#latData");
 const lonData = document.querySelector("#lonData");
 const main = document.querySelector("#nowWeather");
+const nowHours = date.getHours + 1;
+const colorChange = document.querySelector("body");
+const textChanges = document.querySelectorAll("a");
 
 const url = "https://api.openweathermap.org/data/2.5/weather?";
 const appid = "15da96b2fae8092bcfef32eaac4baa79";
@@ -50,23 +54,44 @@ let citys = [
 // const tokyo = `${url}lat=${tokyolat}&lon=${tokyolon}&appid=${appid}&units=${units}&lang=${lang}`;
 // const kyoto = `${url}lat=${kyotolat}&lon=${kyotolon}&appid=${appid}&units=${units}&lang=${lang}`;
 
-for(let i = 0; i < citys.length; i++){
-    fetch(citys[i],{
-        mode: 'cors',
-        cache: 'no-store',
-    })
-    .then(response => response.json())
-    .then(data =>{
-        cityName[i].textContent = data.name;
-        cityWeather[i].textContent = data.weather[0].description;
-        maxTemp[i].textContent = data.main.temp_max;
-        minTemp[i].textContent = data.main.temp_min;
-        month[i].textContent = date.getMonth() + 1;
-        day[i].textContent = date.getDate();
-        hours[i].textContent = date.getHours();
-        imgs[i].outerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="天気アイコン">`
-        console.log(data.weather[0].icon);
-    })
+function timeCheck() {
+    if ( nowHours <= 5 && nowHours >= 14 ) {
+        colorChange.style.backgroundImage = `linear-gradient( 173deg, #e0feff, #30bff8 )`
+        colorChange.style.color = "#000";
+    }else if ( nowHours <= 15 && nowHours >= 18 ) {
+        colorChange.style.backgroundImage = `linear-gradient( 315deg, #ffb347, #ffcccb )`
+        colorChange.style.color = "#000";
+    }else{
+        colorChange.style.backgroundImage = `linear-gradient( 345deg, #0a1635, #142850, #1e3c72, #274690 )`
+        colorChange.style.color = "#fff";
+        textChanges.forEach(e => {
+            e.style.color = "#fff"
+        });
+        borderChanges.forEach(ele => {
+            ele.style.border = "solid 1px #ccc"
+        });
+    }
+}    
+
+function cityDate() {
+    for(let i = 0; i < citys.length; i++){
+        fetch(citys[i],{
+            mode: 'cors',
+            cache: 'no-store',
+        })
+        .then(response => response.json())
+        .then(data =>{
+            cityName[i].textContent = data.name;
+            cityWeather[i].textContent = data.weather[0].description;
+            maxTemp[i].textContent = data.main.temp_max;
+            minTemp[i].textContent = data.main.temp_min;
+            month[i].textContent = date.getMonth() + 1;
+            day[i].textContent = date.getDate();
+            hours[i].textContent = date.getHours();
+            imgs[i].outerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="天気アイコン">`
+            console.log(data.weather[0].icon);
+        })
+    }
 }
 
 
@@ -96,27 +121,18 @@ btn.addEventListener("click" , ()=>{
     month = document.querySelectorAll(".month");
     day = document.querySelectorAll(".day");
     hours = document.querySelectorAll(".hours");
+    borderChanges = document.querySelectorAll(".Data");
+
     date = new Date()
 
-    for(let i = 0; i < citys.length; i++){
-        fetch(citys[i],{
-            mode: 'cors',
-            cache: 'no-store',
-        })
-        .then(response => response.json())
-        .then(data =>{
-            cityName[i].textContent = data.name;
-            cityWeather[i].textContent = data.weather[0].description;
-            maxTemp[i].textContent = data.main.temp_max;
-            minTemp[i].textContent = data.main.temp_min;
-            month[i].textContent = date.getMonth() + 1;
-            day[i].textContent = date.getDate();
-            hours[i].textContent = date.getHours();
-            imgs[i].outerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="天気アイコン">`
-            console.log(data.weather[0].icon);
-        })
-    }
+    cityDate();
+
+    timeCheck();
 })
+
+
+cityDate();
+timeCheck();
 // fetch(osaka,{
 //     mode: 'cors',
 //     cache: 'no-store',
