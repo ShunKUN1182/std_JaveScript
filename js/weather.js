@@ -1,14 +1,17 @@
-const cityName = document.querySelectorAll(".mapData");
-const cityWeather = document.querySelectorAll(".weather");
-const maxTemp = document.querySelectorAll(".maxTemperature");
-const minTemp = document.querySelectorAll(".minTemperature");
-const imgs = document.querySelectorAll(".weatherData > img");
-
-const month = document.querySelectorAll(".month");
-const day = document.querySelectorAll(".day");
-const hours = document.querySelectorAll(".hours");
+let cityName = document.querySelectorAll(".mapData");
+let cityWeather = document.querySelectorAll(".weather");
+let maxTemp = document.querySelectorAll(".maxTemperature");
+let minTemp = document.querySelectorAll(".minTemperature");
+let imgs = document.querySelectorAll(".weatherData > img");
+let month = document.querySelectorAll(".month");
+let day = document.querySelectorAll(".day");
+let hours = document.querySelectorAll(".hours");
 let date = new Date()
-console.log(date);
+
+const btn = document.querySelector("button");
+const latData = document.querySelector("#latData");
+const lonData = document.querySelector("#lonData");
+const main = document.querySelector("#nowWeather");
 
 const url = "https://api.openweathermap.org/data/2.5/weather?";
 const appid = "15da96b2fae8092bcfef32eaac4baa79";
@@ -32,11 +35,7 @@ const sapporolon = "141.4404659830317";
 const kobelat = "34.6907154891843";
 const kobelon = "135.19467224742309";
 
-// const osaka = `${url}lat=${osakalat}&lon=${osakalon}&appid=${appid}&units=${units}&lang=${lang}`;
-// const tokyo = `${url}lat=${tokyolat}&lon=${tokyolon}&appid=${appid}&units=${units}&lang=${lang}`;
-// const kyoto = `${url}lat=${kyotolat}&lon=${kyotolon}&appid=${appid}&units=${units}&lang=${lang}`;
-
-const citys = [
+let citys = [
     `${url}lat=${osakalat}&lon=${osakalon}&appid=${appid}&units=${units}&lang=${lang}`,
     `${url}lat=${tokyolat}&lon=${tokyolon}&appid=${appid}&units=${units}&lang=${lang}`,
     `${url}lat=${kyotolat}&lon=${kyotolon}&appid=${appid}&units=${units}&lang=${lang}`,
@@ -46,6 +45,10 @@ const citys = [
     `${url}lat=${sapporolat}&lon=${sapporolon}&appid=${appid}&units=${units}&lang=${lang}`,
     `${url}lat=${kobelat}&lon=${kobelon}&appid=${appid}&units=${units}&lang=${lang}`,
 ];
+
+// const osaka = `${url}lat=${osakalat}&lon=${osakalon}&appid=${appid}&units=${units}&lang=${lang}`;
+// const tokyo = `${url}lat=${tokyolat}&lon=${tokyolon}&appid=${appid}&units=${units}&lang=${lang}`;
+// const kyoto = `${url}lat=${kyotolat}&lon=${kyotolon}&appid=${appid}&units=${units}&lang=${lang}`;
 
 for(let i = 0; i < citys.length; i++){
     fetch(citys[i],{
@@ -66,6 +69,54 @@ for(let i = 0; i < citys.length; i++){
     })
 }
 
+
+
+btn.addEventListener("click" , ()=>{
+    let addLat = latData.value;
+    let addLon = lonData.value;
+    citys.push(`${url}lat=${addLat}&lon=${addLon}&appid=${appid}&units=${units}&lang=${lang}`);
+    main.innerHTML += 
+    `<div class="Data">
+    <div class="timeMap">
+    <h3><span class="mapData">？</span></h3>
+    <h4><time datetime=""><span class="month">?</span>月<span class="day">?</span>日<span class="hours">?</span>時</time></h4>
+    </div>
+    <div class="weatherData">
+    <img src="images/what.jpg" alt="天気アイコン">
+    <h2><span class="weather">？</span></h2>
+    <p class="maxTemp"><span class="maxTemperature">?</span>℃</p>
+    <p class="minTemp"><span class="minTemperature">?</span>℃</p>
+    </div>
+    </div>`;
+    cityName = document.querySelectorAll(".mapData");
+    cityWeather = document.querySelectorAll(".weather");
+    maxTemp = document.querySelectorAll(".maxTemperature");
+    minTemp = document.querySelectorAll(".minTemperature");
+    imgs = document.querySelectorAll(".weatherData > img");
+    month = document.querySelectorAll(".month");
+    day = document.querySelectorAll(".day");
+    hours = document.querySelectorAll(".hours");
+    date = new Date()
+
+    for(let i = 0; i < citys.length; i++){
+        fetch(citys[i],{
+            mode: 'cors',
+            cache: 'no-store',
+        })
+        .then(response => response.json())
+        .then(data =>{
+            cityName[i].textContent = data.name;
+            cityWeather[i].textContent = data.weather[0].description;
+            maxTemp[i].textContent = data.main.temp_max;
+            minTemp[i].textContent = data.main.temp_min;
+            month[i].textContent = date.getMonth() + 1;
+            day[i].textContent = date.getDate();
+            hours[i].textContent = date.getHours();
+            imgs[i].outerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="天気アイコン">`
+            console.log(data.weather[0].icon);
+        })
+    }
+})
 // fetch(osaka,{
 //     mode: 'cors',
 //     cache: 'no-store',
