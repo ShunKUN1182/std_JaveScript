@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    padding-bottom: 100vh;
+}
+
 header {
     display: flex;
     margin: 30px 50px 10px;
