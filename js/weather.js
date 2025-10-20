@@ -13,7 +13,7 @@ const btn = document.querySelector("button");
 const latData = document.querySelector("#latData");
 const lonData = document.querySelector("#lonData");
 const main = document.querySelector("#nowWeather");
-const nowHours = date.getHours + 1;
+const nowHours = date.getHours();
 const colorChange = document.querySelector("body");
 const textChanges = document.querySelectorAll("a");
 
@@ -55,7 +55,7 @@ let citys = [
 // const kyoto = `${url}lat=${kyotolat}&lon=${kyotolon}&appid=${appid}&units=${units}&lang=${lang}`;
 
 function timeCheck() {
-    if ( nowHours <= 5 && nowHours >= 14 ) {
+    if ( nowHours >= 5 && nowHours <= 14 ) {
         colorChange.style.backgroundImage = `linear-gradient( 173deg, #e0feff, #30bff8 )`
         colorChange.style.color = "#000";
         textChanges.forEach(e => {
@@ -64,7 +64,7 @@ function timeCheck() {
         borderChanges.forEach(ele => {
             ele.style.border = "solid 1px #000"
         });
-    }else if ( nowHours <= 15 && nowHours >= 18 ) {
+    }else if ( nowHours >= 15 && nowHours <= 18 ) {
         colorChange.style.backgroundImage = `linear-gradient( 315deg, #ffb347, #ffcccb )`
         colorChange.style.color = "#000";
         textChanges.forEach(e => {
@@ -141,6 +141,7 @@ btn.addEventListener("click" , ()=>{
 
 cityDate();
 timeCheck();
+console.log(nowHours);
 
 // fetch(osaka,{
 //     mode: 'cors',

@@ -11,7 +11,15 @@
     <button type="button" class="btn" value="#0F0">緑色ボタン</button>
     <button type="button" class="btn" value="yellow">黄色ボタン</button>
     <button type="button" class="btn" value="tomato">トマトボタン</button>
+    
+    <script>
+        const btns = document.querySelectorAll("button");
 
-    <script src="js/sample05.js"></script>
+        btns.forEach(e =>{
+            e.addEventListener("click" , ()=>{
+                document.querySelector("body").style.backgroundColor = e.value;
+            })
+        })
+    </script>
 </body>
 </html>
