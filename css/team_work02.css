@@ -229,3 +229,29 @@ header a:hover {
 .coffeeList a:hover {
     letter-spacing: 3px;
 }
+
+#location {
+    background-image: url(../images_02/location.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.locationBanner {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.locationBanner h2 {
+    font-size: 4.5rem;
+    color: #fff;
+    font-weight: bold;
+    filter: drop-shadow(1px 1px 10px #c0c0c0);
+}
+
+.ourstore {
+    display: flex;
+    flex-direction: column;
+}
