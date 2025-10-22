@@ -1,12 +1,11 @@
 * {
     margin: 0;
     padding: 0;
-    font-size: 0.9rem;
     font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif; 
 }
 
 html{
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 
 header {
@@ -104,7 +103,7 @@ header a:hover {
 }
 
 .coffeeMenu dt {
-    width: 22vw;
+    width: 18vw;
     border-bottom: #000 dotted 1px;
     margin-right: 25px;
     margin-bottom: 35px;
@@ -136,7 +135,7 @@ header a:hover {
 }
 
 .rightMenu dt {
-    width: 22vw;
+    width: 18vw;
     border-bottom: #000 dotted 1px;
     margin-right: 25px;
     margin-bottom: 35px;
@@ -259,4 +258,45 @@ header a:hover {
 .ourstore {
     display: flex;
     flex-direction: column;
+}
+
+.ourstore{
+    height: 95vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ourstore h3 {
+    border-bottom: #e03131 6px solid;
+    width: fit-content;
+    font-size: 2.5rem;
+    margin-bottom: 70px;
+    padding-bottom: 10px;
+}
+
+.ourstore iframe {
+    width: 50vw;
+    height: 40vh;
+    border: #000 1px solid;
+}
+
+.ourstoreMap {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 30px;
+}
+
+.ourstoreMap p {
+    font-size: 1rem;
+}
+
+footer {
+    height: 5vh;
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 5vh;
 }
