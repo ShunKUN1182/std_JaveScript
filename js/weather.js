@@ -17,6 +17,19 @@ const nowHours = date.getHours();
 const colorChange = document.querySelector("body");
 const textChanges = document.querySelectorAll("a");
 
+console.log(navigator);
+function success(pos) {
+    const currentLat = pos.coords.latitude;
+    const currentLon = pos.coords.longitude;
+    console.log(currentLat , currentLon);
+    latData.value = currentLat;
+    lonData.value = currentLon;
+}
+function fail(error) {
+    console.log(error);
+}
+navigator.geolocation.getCurrentPosition(success , fail);
+
 const url = "https://api.openweathermap.org/data/2.5/weather?";
 const appid = "15da96b2fae8092bcfef32eaac4baa79";
 const units = "metric";
@@ -81,6 +94,7 @@ function timeCheck() {
         });
         borderChanges.forEach(ele => {
             ele.style.border = "solid 1px #ccc"
+            ele.style.backgroundColor = "rgba(116, 79, 14, 1)";
         });
     }
 }    
@@ -142,6 +156,12 @@ btn.addEventListener("click" , ()=>{
 cityDate();
 timeCheck();
 console.log(nowHours);
+
+// borderChanges[0].addEventListener("click" , ()=>{
+//     window.open('../','')
+// })
+
+
 
 // fetch(osaka,{
 //     mode: 'cors',
