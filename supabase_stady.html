@@ -32,13 +32,37 @@
                     cursor: pointer;
                 }
             }
+
+            .addDiv {
+                display: flex;
+                align-items: center;
+            }
+
+            input {
+                width: 300px;
+                height: 30px;
+                border-radius: 20px;
+                border: #000 0.3px solid;
+            }
+
+            button {
+                display: block;
+                width: 200px;
+                height: 40px;
+                border-radius: 20px;
+                border: none;
+                background-color: skyblue;
+                font-weight: bold;
+                cursor: pointer;
+            }
         </style>
     </head>
     <body>
         <h1>Hello SupaBase</h1>
-
-        <input type="text" />
-        <button type="button">このデータを登録！</button>
+        <div class="addDiv">
+            <input type="text" />
+            <button type="button">このデータを登録！</button>
+        </div>
 
         <ul>
             <!-- ここに追加 -->
