@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Supabaseのお勉強</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Yuji+Mai&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            * {
+                margin: 10px;
+                padding: 0;
+            }
+            ul {
+                list-style: none;
+                margin: 20px;
+                li {
+                    border: #000 solid 1px;
+                    padding: 10px;
+                    width: 600px;
+                    color: #000;
+                    font-size: 24px;
+                    font-weight: bold;
+                    font-family: "Roboto", sans-serif;
+                    -webkit-text-stroke-width: 0.3px;
+                    -webkit-text-stroke-color: #ddd;
+                    background-image: url(images/ramenImage.jpeg);
+                    cursor: pointer;
+                }
+            }
+
+            .addDiv {
+                display: flex;
+                align-items: center;
+            }
+
+            input {
+                width: 300px;
+                height: 30px;
+                border-radius: 20px;
+                border: #000 0.3px solid;
+            }
+
+            button {
+                display: block;
+                width: 200px;
+                height: 40px;
+                border-radius: 20px;
+                border: none;
+                background-color: skyblue;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Hello SupaBase</h1>
+        <div class="addDiv">
+            <input type="text" />
+            <button type="button">このデータを登録！</button>
+        </div>
+
+        <ul>
+            <!-- ここに追加 -->
+        </ul>
+
+        <!-- <script src="https://esm.sh/@supabase/supabase-js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <script src="js/supabase_stady.js"></script>
+    </body>
+</html>
