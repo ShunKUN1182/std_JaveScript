@@ -12,6 +12,7 @@ async function loadData() {
     console.log("error:", error);
     for (let i = 0; i < data.length; i++) {
         list.insertAdjacentHTML("beforeend", `<li> ${i + 1} : ${data[i].title}</li>`);
+        list.insertAdjacentHTML("beforeend", `<img src="${data[i].image_url}">`);
     }
 }
 
