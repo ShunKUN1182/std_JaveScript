@@ -7,7 +7,6 @@ const list = document.querySelector("ul");
 
 async function loadData() {
     const { data, error } = await supabase.from("ramen").select("*");
-
     console.log("data:", data);
     console.log("error:", error);
     for (let i = 0; i < data.length; i++) {
