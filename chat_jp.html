@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <title>自己紹介サイト（架空人物）</title>
+        <style>
+            body {
+                font-family: "Helvetica", sans-serif;
+                margin: 0;
+                background: #f5f5f5;
+                color: #333;
+            }
+            header {
+                background: #4aa8ff;
+                padding: 20px;
+                text-align: center;
+                color: white;
+            }
+            .container {
+                width: 800px;
+                margin: 30px auto;
+                background: white;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            }
+            .profile {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+            }
+            .profile img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            h2 {
+                margin: 0;
+            }
+            .btn {
+                margin-top: 20px;
+                padding: 10px 20px;
+                background: #4aa8ff;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+            .btn:hover {
+                background: #2f8ad6;
+            }
+            #secret {
+                margin-top: 20px;
+                padding: 15px;
+                background: #e3f2ff;
+                border-radius: 8px;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>架空人物：佐藤レンの自己紹介</h1>
+        </header>
+
+        <div class="container">
+            <div class="profile">
+                <img src="https://placehold.jp/150x150.png" alt="profile" />
+                <div>
+                    <h2>佐藤 レン（Renn Sato）</h2>
+                    <p>年齢：22歳</p>
+                    <p>職業：フロントエンドエンジニア見習い</p>
+                </div>
+            </div>
+
+            <h3>◆ 趣味</h3>
+            <ul>
+                <li>コーヒー巡り</li>
+                <li>ゲーム開発</li>
+                <li>写真撮影</li>
+            </ul>
+
+            <h3>◆ 一言コメント</h3>
+            <p>
+                はじめまして！日常の中にある“ちょっとした面白さ”を見つけるのが好きです。最近はWebGLに挑戦中。
+            </p>
+
+            <button class="btn" id="btnSecret">秘密を表示する</button>
+
+            <div id="secret">実は、猫を見るとすぐ写真を撮ってしまう癖があります…！</div>
+        </div>
+
+        <script>
+            const btn = document.getElementById("btnSecret");
+            const secret = document.getElementById("secret");
+
+            btn.addEventListener("click", () => {
+                if (secret.style.display === "none") {
+                    secret.style.display = "block";
+                    btn.textContent = "秘密を隠す";
+                } else {
+                    secret.style.display = "none";
+                    btn.textContent = "秘密を表示する";
+                }
+            });
+        </script>
+    </body>
+</html>
