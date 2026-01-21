@@ -38,7 +38,11 @@ async function callApi() {
         htmlWrap += `<div class="contain">`;
         htmlWrap += `<div>`;
         htmlWrap += `<img src="images/Icon.png" alt="日付" />`;
-        htmlWrap += `<p>${e.event_date}</p>`;
+        // htmlWrap += `<p>${e.event_date}</p>`;
+        const dates = e.event_date.split("-");
+        console.log(dates);
+        htmlWrap += `<p>${dates[0]}年${dates[1]}月${dates[2]}日</p>`;
+
         htmlWrap += `</div>`;
         htmlWrap += `<div>`;
         htmlWrap += `<img src="images/icon2.png" alt="マップ" />`;
