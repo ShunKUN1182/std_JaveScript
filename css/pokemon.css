@@ -1,5 +1,6 @@
 :root {
     --backgroundColor: linear-gradient(to bottom right, #eff6ff 0%, #faf5ff 100%);
+    --pokemonBackgroundColor: linear-gradient(to bottom right, #f3f4f6 0%, #e5e7eb 100%);
     --headFontColor: #0a0a0a;
     --fontColor: #364153;
     --grayFontColor: #4a5565;
@@ -63,6 +64,70 @@ header {
             display: flex;
             gap: 8px;
             flex-wrap: wrap;
+        }
+    }
+}
+
+#pokemon {
+    color: var(--grayFontColor);
+    width: 90vw;
+    margin: 0 auto 16px;
+}
+
+.pokemons {
+    .pokemon {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        border-radius: 10px;
+        height: 400px;
+        width: 300px;
+        margin-left: 70px;
+        border: 1px rgba(0, 0, 0, 0.1) solid;
+        .pokemonBackground {
+            width: 300px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f3f4f6;
+            img {
+                width: 128px;
+                height: 128px;
+            }
+        }
+        .pokemonText {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            .noPokemon {
+                display: flex;
+                justify-content: space-between;
+                p {
+                    font-size: 14px;
+                    color: #6a7282;
+                }
+                div {
+                    display: flex;
+                    gap: 6px;
+                    span {
+                        width: 50px;
+                        height: 22px;
+                        border-radius: 8px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 12px;
+                        color: #fff;
+                    }
+                    .grass {
+                        background-color: #00c950;
+                    }
+                    .poison {
+                        background-color: #ad46ff;
+                    }
+                }
+            }
         }
     }
 }
