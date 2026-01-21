@@ -1,0 +1,68 @@
+:root {
+    --backgroundColor: linear-gradient(to bottom right, #eff6ff 0%, #faf5ff 100%);
+    --headFontColor: #0a0a0a;
+    --fontColor: #364153;
+    --grayFontColor: #4a5565;
+}
+
+body {
+    background-image: var(--backgroundColor);
+}
+
+header {
+    height: 80px;
+    margin: 32px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        color: var(--headFontColor);
+        font-size: 30px;
+    }
+    p {
+        color: var(--grayFontColor);
+        font-size: 18px;
+    }
+}
+
+.pokemonFilters {
+    margin: 0 auto;
+    background-color: #fff;
+    width: 90vw;
+    height: 200px;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 24px;
+    .nameFilter {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 16px;
+        p {
+            color: var(--fontColor);
+            font-size: 14px;
+        }
+        input {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+            height: 36px;
+            background-color: #f3f3f5;
+            padding-left: 12px;
+        }
+    }
+    .typeFilter {
+        display: flex;
+        flex-direction: column;
+        p {
+            color: var(--fontColor);
+        }
+        div {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+    }
+}

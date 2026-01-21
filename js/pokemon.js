@@ -11,4 +11,4 @@ async function pokemonApi() {
     pokemonInput.textContent = jpData.name;
 }
 
-pokemonApi();
+// pokemonApi();

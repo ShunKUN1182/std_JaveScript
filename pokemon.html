@@ -5,9 +5,62 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <script defer src="js/pokemon.js"></script>
+        <link rel="stylesheet" href="css/ress.css" />
+        <link rel="stylesheet" href="css/pokemon.css" />
     </head>
     <body>
-        <h1>ポケモン151匹ゲットだぜ!!!</h1>
-        <p>ここに表示</p>
+        <header>
+            <h1>ポケモン図鑑</h1>
+            <p>全151匹のポケモンを収録しています</p>
+        </header>
+        <main>
+            <div class="pokemonFilters">
+                <div class="nameFilter">
+                    <p>名前で検索</p>
+                    <input type="text" placeholder="ポケモンの名前を入力..." />
+                </div>
+                <div class="typeFilter">
+                    <p>タイプで絞り込み</p>
+                    <div>
+                        <input type="checkbox" name="type" id="normarType" />
+                        <label for="normarType">ノーマル</label>
+                        <input type="checkbox" name="type" id="fireType" />
+                        <label for="fireType">ほのお</label>
+                        <input type="checkbox" name="type" id="waterType" />
+                        <label for="waterType">みず</label>
+                        <input type="checkbox" name="type" id="lightType" />
+                        <label for="lightType">でんき</label>
+                        <input type="checkbox" name="type" id="grassType" />
+                        <label for="grassType">くさ</label>
+                        <input type="checkbox" name="type" id="iceType" />
+                        <label for="iceType">こおり</label>
+                        <input type="checkbox" name="type" id="fightType" />
+                        <label for="fightType">かくとう</label>
+                        <input type="checkbox" name="type" id="poisonType" />
+                        <label for="poisonType">どく</label>
+                        <input type="checkbox" name="type" id="jimenType" />
+                        <label for="jimenType">じめん</label>
+                        <input type="checkbox" name="type" id="flyType" />
+                        <label for="flyType">ひこう</label>
+                        <input type="checkbox" name="type" id="esperType" />
+                        <label for="esperType">エスパー</label>
+                        <input type="checkbox" name="type" id="insectType" />
+                        <label for="insectType">むし</label>
+                        <input type="checkbox" name="type" id="rockType" />
+                        <label for="rockType">いわ</label>
+                        <input type="checkbox" name="type" id="ghostType" />
+                        <label for="ghostType">ゴースト</label>
+                        <input type="checkbox" name="type" id="dragonType" />
+                        <label for="dragonType">ドラゴン</label>
+                        <input type="checkbox" name="type" id="evilType" />
+                        <label for="evilType">あく</label>
+                        <input type="checkbox" name="type" id="steelType" />
+                        <label for="steelType">はがね</label>
+                        <input type="checkbox" name="type" id="fairyType" />
+                        <label for="fairyType">フェアリー</label>
+                    </div>
+                </div>
+            </div>
+        </main>
     </body>
 </html>
