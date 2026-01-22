@@ -31,13 +31,16 @@ header {
     margin: 0 auto;
     background-color: #fff;
     width: 90vw;
-    height: 200px;
+    /* height: 200px; */
     border-radius: 10px;
     padding: 24px;
     margin-bottom: 24px;
     .nameFilter {
-        display: flex;
-        flex-direction: column;
+        /* display: flex;
+        flex-direction: column; */
+        display: grid;
+        grid-template-columns: repeat(30px, 1fr);
+        grid-template-rows: repeat(20px, 1fr);
         gap: 8px;
         margin-bottom: 16px;
         p {
@@ -75,17 +78,21 @@ header {
 }
 
 .pokemons {
+    margin: 0 auto;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
     .pokemon {
         display: flex;
         flex-direction: column;
         background-color: #fff;
         border-radius: 10px;
-        height: 400px;
-        width: 300px;
-        margin-left: 70px;
+        height: 380px;
         border: 1px rgba(0, 0, 0, 0.1) solid;
+        margin-bottom: 10px;
         .pokemonBackground {
-            width: 300px;
             height: 200px;
             display: flex;
             justify-content: center;
@@ -111,8 +118,9 @@ header {
                     display: flex;
                     gap: 6px;
                     span {
-                        width: 50px;
+                        /* width: 60px; */
                         height: 22px;
+                        padding: 5px 14px;
                         border-radius: 8px;
                         display: flex;
                         justify-content: center;
@@ -120,14 +128,85 @@ header {
                         font-size: 12px;
                         color: #fff;
                     }
+                    .normal {
+                        background-color: #99a1af;
+                    }
+                    .fire {
+                        background-color: #ff6900;
+                    }
+                    .water {
+                        background-color: #2b7fff;
+                    }
                     .grass {
                         background-color: #00c950;
+                    }
+                    .light {
+                        background-color: #fdc700;
+                    }
+                    .ice {
+                        background-color: #00d3f3;
+                    }
+                    .fight {
+                        background-color: #e7000b;
                     }
                     .poison {
                         background-color: #ad46ff;
                     }
+                    .jimen {
+                        background-color: #9d1835;
+                    }
+                    .fly {
+                        background-color: #7c86ff;
+                    }
+                    .esper {
+                        background-color: #f6339a;
+                    }
+                    .insect {
+                        background-color: #9ec100;
+                    }
+                    .rock {
+                        background-color: #57534d;
+                    }
+                    .ghost {
+                        background-color: #7f22fe;
+                    }
+                    .dragon {
+                        background-color: #432dd7;
+                    }
+                    .evil {
+                        background-color: #364153;
+                    }
+                    .steel {
+                        background-color: #90a1b9;
+                    }
+                    .fairy {
+                        background-color: #fda5d5;
+                    }
+                }
+            }
+            h2 {
+                font-size: 20px;
+                margin-bottom: 8px;
+            }
+            div {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 4px;
+                p {
+                    color: var(--grayFontColor);
                 }
             }
         }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    p {
+        color: var(--fontColor);
+        font-size: 14px;
     }
 }

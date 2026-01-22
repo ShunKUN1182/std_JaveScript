@@ -11,4 +11,13 @@ async function pokemonApi() {
     pokemonInput.textContent = jpData.name;
 }
 
+const no1Data = {
+    name: "フシギダネ",
+    num: "001",
+    type: ["grass", "poison"],
+    height: 0.7,
+    weight: 6.9,
+    img: "pokemonImg / pokemon01.png",
+};
+
 // pokemonApi();
