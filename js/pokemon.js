@@ -1,5 +1,4 @@
 const pokemonsOutput = document.querySelector(".pokemons");
-// const url = "https://pokeapi.co/api/v2/pokemon-species/pikachu";
 const urlJp001 = "https://pokeapi.co/api/v2/pokemon-species/bulbasaur";
 const url001 = "https://pokeapi.co/api/v2/pokemon/bulbasaur";
 
@@ -18,7 +17,6 @@ async function pokemon001() {
     height001 = height001 / 10;
     weight001 = weight001 / 10;
 
-    // pokemonsOutput.innerHTML = `<img src="${img001}">`;
     console.log(jpName001, type001);
     console.log(height001, weight001);
     console.log(pokemonNo001);
@@ -71,7 +69,6 @@ async function pokemon002() {
     height002 = height002 / 10;
     weight002 = weight002 / 10;
 
-    // pokemonsOutput.innerHTML = `<img src="${img002}">`;
     console.log(jpName002, type002);
     console.log(height002, weight002);
     console.log(pokemonNo002);
