@@ -1,54 +1,69 @@
-const pokemonInput = document.querySelector(".pokemons");
-const url = "https://pokeapi.co/api/v2/pokemon-species/pikachu";
+const pokemonsOutput = document.querySelector(".pokemons");
+// const url = "https://pokeapi.co/api/v2/pokemon-species/pikachu";
+const urlJp001 = "https://pokeapi.co/api/v2/pokemon-species/bulbasaur";
+const url001 = "https://pokeapi.co/api/v2/pokemon/bulbasaur";
 
-async function pokemonApi() {
-    const fetchData = await fetch(url);
-    const jsonData = await fetchData.json();
+async function pokemon001() {
+    const fetchJp001 = await fetch(urlJp001);
+    const JpData001 = await fetchJp001.json();
+    const fetch001 = await fetch(url001);
+    const data001 = await fetch001.json();
 
-    const jpData = jsonData.names.find((n) => n.language.name === "ja");
-    console.log(jpData);
+    const jpName001 = JpData001.names.find((n) => n.language.name === "ja");
+    const img001 = data001.sprites.other["official-artwork"].front_default;
+    const type001 = data001.types.map((t) => t.type.name);
+    const pokemonNo001 = data001.id;
+    let height001 = data001.height;
+    let weight001 = data001.weight;
+    height001 = height001 / 10;
+    weight001 = weight001 / 10;
 
-    pokemonInput.textContent = jpData.name;
-}
+    // pokemonsOutput.innerHTML = `<img src="${img001}">`;
+    console.log(jpName001, type001);
+    console.log(height001, weight001);
+    console.log(pokemonNo001);
 
-const no1Data = {
-    name: "フシギダネ",
-    num: "001",
-    type: ["grass", "poison"],
-    height: 0.7,
-    weight: 6.9,
-    img: "pokemonImg/pokemon01.png",
-};
-
-function pokemonOutput() {
-    let pokemonOutput = "";
-    pokemonOutput += `<div class="pokemon">`;
-    pokemonOutput += `<div class="pokemonBackground">`;
-    pokemonOutput += `<img src="${no1Data.img}" alt="${no1Data.name}" />`;
-    pokemonOutput += `</div>`;
-    pokemonOutput += `<div class="pokemonText">`;
-    pokemonOutput += `<div class="noPokemon">`;
-    pokemonOutput += `<p>No.${no1Data.num}</p>`;
-    pokemonOutput += `<div>`;
-    no1Data.type.forEach((e) => {
-        pokemonOutput += `<span class="${e}">${e}</span>`;
+    let pokemonBox = "";
+    pokemonBox += `<div class="pokemon">`;
+    pokemonBox += `<div class="pokemonBackground">`;
+    pokemonBox += `<img src="${img001}" alt="${jpName001.name}" />`;
+    pokemonBox += `</div>`;
+    pokemonBox += `<div class="pokemonText">`;
+    pokemonBox += `<div class="noPokemon">`;
+    pokemonBox += `<p>No.${pokemonNo001}</p>`;
+    pokemonBox += `<div>`;
+    type001.forEach((e) => {
+        pokemonBox += `<span class="${e}">${e}</span>`;
     });
-    pokemonOutput += `</div>`;
-    pokemonOutput += `</div>`;
-    pokemonOutput += `<h2>フシギダネ</h2>`;
-    pokemonOutput += `<div>`;
-    pokemonOutput += `<p>高さ:</p>`;
-    pokemonOutput += `<p>${no1Data.height}m</p>`;
-    pokemonOutput += `</div>`;
-    pokemonOutput += `<div>`;
-    pokemonOutput += `<p>重さ:</p>`;
-    pokemonOutput += `<p>${no1Data.weight}kg</p>`;
-    pokemonOutput += `</div>`;
-    pokemonOutput += `</div>`;
-    pokemonOutput += `</div>`;
+    pokemonBox += `</div>`;
+    pokemonBox += `</div>`;
+    pokemonBox += `<h2>フシギダネ</h2>`;
+    pokemonBox += `<div>`;
+    pokemonBox += `<p>高さ:</p>`;
+    pokemonBox += `<p>${height001}m</p>`;
+    pokemonBox += `</div>`;
+    pokemonBox += `<div>`;
+    pokemonBox += `<p>重さ:</p>`;
+    pokemonBox += `<p>${weight001}kg</p>`;
+    pokemonBox += `</div>`;
+    pokemonBox += `</div>`;
+    pokemonBox += `</div>`;
 
-    pokemonInput.innerHTML += pokemonOutput;
+    pokemonsOutput.innerHTML += pokemonBox;
 }
 
-pokemonOutput();
-// pokemonApi();
+pokemon001();
+
+// const no1Data = {
+//     name: "フシギダネ",
+//     num: "001",
+//     type: ["grass", "poison"],
+//     height: 0.7,
+//     weight: 6.9,
+//     img: "pokemonImg/pokemon01.png",
+// };
+
+// function pokemonOutput() {
+// }
+
+// pokemonOutput();
