@@ -54,16 +54,55 @@ async function pokemon001() {
 
 pokemon001();
 
-// const no1Data = {
-//     name: "フシギダネ",
-//     num: "001",
-//     type: ["grass", "poison"],
-//     height: 0.7,
-//     weight: 6.9,
-//     img: "pokemonImg/pokemon01.png",
-// };
+const urlJp002 = "https://pokeapi.co/api/v2/pokemon-species/ivysaur";
+const url002 = "https://pokeapi.co/api/v2/pokemon/ivysaur";
+async function pokemon002() {
+    const fetchJp002 = await fetch(urlJp002);
+    const JpData002 = await fetchJp002.json();
+    const fetch002 = await fetch(url002);
+    const data002 = await fetch002.json();
 
-// function pokemonOutput() {
-// }
+    const jpName002 = JpData002.names.find((n) => n.language.name === "ja");
+    const img002 = data002.sprites.other["official-artwork"].front_default;
+    const type002 = data002.types.map((t) => t.type.name);
+    const pokemonNo002 = data002.id;
+    let height002 = data002.height;
+    let weight002 = data002.weight;
+    height002 = height002 / 10;
+    weight002 = weight002 / 10;
 
-// pokemonOutput();
+    // pokemonsOutput.innerHTML = `<img src="${img002}">`;
+    console.log(jpName002, type002);
+    console.log(height002, weight002);
+    console.log(pokemonNo002);
+
+    let pokemonBox = "";
+    pokemonBox += `<div class="pokemon">`;
+    pokemonBox += `<div class="pokemonBackground">`;
+    pokemonBox += `<img src="${img002}" alt="${jpName002.name}" />`;
+    pokemonBox += `</div>`;
+    pokemonBox += `<div class="pokemonText">`;
+    pokemonBox += `<div class="noPokemon">`;
+    pokemonBox += `<p>No.${pokemonNo002}</p>`;
+    pokemonBox += `<div>`;
+    type002.forEach((e) => {
+        pokemonBox += `<span class="${e}">${e}</span>`;
+    });
+    pokemonBox += `</div>`;
+    pokemonBox += `</div>`;
+    pokemonBox += `<h2>フシギダネ</h2>`;
+    pokemonBox += `<div>`;
+    pokemonBox += `<p>高さ:</p>`;
+    pokemonBox += `<p>${height002}m</p>`;
+    pokemonBox += `</div>`;
+    pokemonBox += `<div>`;
+    pokemonBox += `<p>重さ:</p>`;
+    pokemonBox += `<p>${weight002}kg</p>`;
+    pokemonBox += `</div>`;
+    pokemonBox += `</div>`;
+    pokemonBox += `</div>`;
+
+    pokemonsOutput.innerHTML += pokemonBox;
+}
+
+pokemon002();
