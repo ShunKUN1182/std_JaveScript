@@ -99,8 +99,8 @@ header {
             align-items: center;
             background-color: #f3f4f6;
             img {
-                width: 128px;
-                height: 128px;
+                width: 200px;
+                height: 200px;
             }
         }
         .pokemonText {
