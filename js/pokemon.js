@@ -153,17 +153,13 @@ const pokemons = [
     "dragonite",
     "mewtwo",
     "mew",
+    // "xerneas",
+    // "bellibolt",
 ];
 
 let urlJp = `https://pokeapi.co/api/v2/pokemon-species/`;
 let url = `https://pokeapi.co/api/v2/pokemon/`;
 let count = 0;
-
-// async function loadPokemons() {
-//     for (let i = 0; i < pokemons.length; i++) {
-//         const element = array[i];
-//     }
-// }
 
 pokemons.forEach((e, i) => {
     urlJp = `https://pokeapi.co/api/v2/pokemon-species/${e}`;
@@ -186,6 +182,7 @@ async function pokemon(url, urlJp) {
         }
         const data = await fetchRes.json();
 
+        console.log(data);
         const jpName = JpData.names.find((n) => n.language.name === "ja");
         const img = data.sprites.other["official-artwork"].front_default;
         const type = data.types.map((t) => t.type.name);
