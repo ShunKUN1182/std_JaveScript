@@ -249,8 +249,10 @@ function outputPokemonData(box) {
     pokemonCount.innerHTML = `${box.length}匹のポケモンが見つかりました`;
 }
 
-pokemonFilter.addEventListener("change", (e) => {
-    let NewPokemonBox = pokemonBoxs.filter((pokemonBox) => pokemonBox.name == e.target.value);
+pokemonFilter.addEventListener("input", (e) => {
+    let NewPokemonBox = pokemonBoxs.filter((pokemonBox) =>
+        pokemonBox.name.includes(e.target.value),
+    );
     console.log(pokemonBoxs);
     outputPokemonData(NewPokemonBox);
 });
