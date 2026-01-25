@@ -254,8 +254,24 @@ pokemonFilter.addEventListener("input", (e) => {
     let NewPokemonBox = pokemonBoxs.filter((pokemonBox) =>
         pokemonBox.name.includes(e.target.value),
     );
-    console.log(pokemonBoxs);
     outputPokemonData(NewPokemonBox);
 });
 
-console.log(typeFilters);
+typeFilters.forEach((e) => {
+    e.addEventListener("input", () => {
+        const sortType = Array.from(typeFilters)
+            .filter((cb) => cb.checked)
+            .map((cb) => cb.name);
+        console.log(sortType);
+
+        if (sortType.length === 0) {
+            outputPokemonData(pokemonBoxs);
+            return;
+        }
+
+        const typeFiltered = pokemonBoxs.filter((pokemon) =>
+            sortType.some((type) => pokemon.pokemonType.includes(type)),
+        );
+        outputPokemonData(typeFiltered);
+    });
+});
