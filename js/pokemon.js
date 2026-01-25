@@ -167,11 +167,9 @@ pokemons.forEach((e, i) => {
     urlJp = `https://pokeapi.co/api/v2/pokemon-species/${e}`;
     url = `https://pokeapi.co/api/v2/pokemon/${e}`;
     pokemon(url, urlJp);
-
-    pokemonCount.innerHTML = `${i + 1}匹のポケモンが見つかりました`;
 });
 
-async function pokemon(url, urlJp) {
+async function pokemon(url, urlJp, name) {
     try {
         const fetchJp = await fetch(urlJp);
         if (!fetchJp.ok) {
@@ -206,6 +204,7 @@ async function pokemon(url, urlJp) {
         console.log(pokemonBoxs);
         if (pokemonBoxs.length === pokemons.length) {
             pokemonBoxs.sort((a, b) => a.no - b.no);
+            pokemonBoxs.sort;
             outputPokemonData(pokemonBoxs);
         }
     } catch (error) {
@@ -213,9 +212,9 @@ async function pokemon(url, urlJp) {
     }
 }
 
-function outputPokemonData(pokemonBoxs) {
+function outputPokemonData(box) {
     pokemonsOutput.innerHTML = "";
-    pokemonBoxs.forEach((p) => {
+    box.forEach((p) => {
         let pokemonBox = "";
 
         pokemonBox += `<div class="pokemon">`;
@@ -247,4 +246,11 @@ function outputPokemonData(pokemonBoxs) {
 
         pokemonsOutput.innerHTML += pokemonBox;
     });
+    pokemonCount.innerHTML = `${box.length}匹のポケモンが見つかりました`;
 }
+
+pokemonFilter.addEventListener("change", (e) => {
+    let NewPokemonBox = pokemonBoxs.filter((pokemonBox) => pokemonBox.name == e.target.value);
+    console.log(pokemonBoxs);
+    outputPokemonData(NewPokemonBox);
+});
