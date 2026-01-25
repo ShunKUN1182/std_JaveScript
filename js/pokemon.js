@@ -1,6 +1,7 @@
 const pokemonsOutput = document.querySelector(".pokemons");
 const pokemonCount = document.querySelector("#pokemon");
 const pokemonFilter = document.querySelector("#pokemonNameFilter");
+const typeFilters = document.querySelectorAll(".typeFilter");
 
 const pokemons = [
     "bulbasaur",
@@ -256,3 +257,5 @@ pokemonFilter.addEventListener("input", (e) => {
     console.log(pokemonBoxs);
     outputPokemonData(NewPokemonBox);
 });
+
+console.log(typeFilters);
