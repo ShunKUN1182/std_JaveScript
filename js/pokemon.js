@@ -1,5 +1,6 @@
 const pokemonsOutput = document.querySelector(".pokemons");
 const pokemonCount = document.querySelector("#pokemon");
+const pokemonFilter = document.querySelector("#pokemonNameFilter");
 
 const pokemons = [
     "bulbasaur",
@@ -160,6 +161,8 @@ const pokemons = [
 let urlJp = `https://pokeapi.co/api/v2/pokemon-species/`;
 let url = `https://pokeapi.co/api/v2/pokemon/`;
 let count = 0;
+
+console.log(pokemonFilter);
 
 pokemons.forEach((e, i) => {
     urlJp = `https://pokeapi.co/api/v2/pokemon-species/${e}`;
