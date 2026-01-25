@@ -118,7 +118,6 @@ header {
                     display: flex;
                     gap: 6px;
                     span {
-                        /* width: 60px; */
                         height: 22px;
                         padding: 5px 14px;
                         border-radius: 8px;
@@ -173,7 +172,7 @@ header {
                     .dragon {
                         background-color: #432dd7;
                     }
-                    .evil {
+                    .dark {
                         background-color: #364153;
                     }
                     .steel {
