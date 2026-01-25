@@ -170,7 +170,7 @@ pokemons.forEach((e, i) => {
     pokemon(url, urlJp);
 });
 
-async function pokemon(url, urlJp, name) {
+async function pokemon(url, urlJp) {
     try {
         const fetchJp = await fetch(urlJp);
         if (!fetchJp.ok) {
