@@ -154,13 +154,12 @@ const pokemons = [
     "dragonite",
     "mewtwo",
     "mew",
-    // "xerneas",
-    // "bellibolt",
 ];
 
 let urlJp = `https://pokeapi.co/api/v2/pokemon-species/`;
 let url = `https://pokeapi.co/api/v2/pokemon/`;
 let count = 0;
+let pokemonBoxs = [];
 
 console.log(pokemonFilter);
 
@@ -168,6 +167,7 @@ pokemons.forEach((e, i) => {
     urlJp = `https://pokeapi.co/api/v2/pokemon-species/${e}`;
     url = `https://pokeapi.co/api/v2/pokemon/${e}`;
     pokemon(url, urlJp);
+
     pokemonCount.innerHTML = `${i + 1}匹のポケモンが見つかりました`;
 });
 
@@ -185,7 +185,6 @@ async function pokemon(url, urlJp) {
         }
         const data = await fetchRes.json();
 
-        console.log(data);
         const jpName = JpData.names.find((n) => n.language.name === "ja");
         const img = data.sprites.other["official-artwork"].front_default;
         const type = data.types.map((t) => t.type.name);
@@ -195,34 +194,57 @@ async function pokemon(url, urlJp) {
         height = height / 10;
         weight = weight / 10;
 
+        pokemonBoxs.push({
+            name: jpName.name,
+            pokemonImg: img,
+            pokemonType: type,
+            no: pokemonNo,
+            pokemonHeight: height,
+            pokemonWeight: weight,
+        });
+
+        console.log(pokemonBoxs);
+        if (pokemonBoxs.length === pokemons.length) {
+            pokemonBoxs.sort((a, b) => a.no - b.no);
+            outputPokemonData(pokemonBoxs);
+        }
+    } catch (error) {
+        console.log(`このポケモンで失敗：${(e, url)}`);
+    }
+}
+
+function outputPokemonData(pokemonBoxs) {
+    pokemonsOutput.innerHTML = "";
+    pokemonBoxs.forEach((p) => {
         let pokemonBox = "";
+
         pokemonBox += `<div class="pokemon">`;
         pokemonBox += `<div class="pokemonBackground">`;
-        pokemonBox += `<img src="${img}" alt="${jpName.name}" />`;
+        pokemonBox += `<img src="${p.pokemonImg}" alt="${p.name}" />`;
         pokemonBox += `</div>`;
         pokemonBox += `<div class="pokemonText">`;
         pokemonBox += `<div class="noPokemon">`;
-        pokemonBox += `<p>No.${pokemonNo}</p>`;
+        pokemonBox += `<p>No.${p.no}</p>`;
         pokemonBox += `<div>`;
-        type.forEach((e) => {
+
+        p.pokemonType.forEach((e) => {
             pokemonBox += `<span class="${e}">${e}</span>`;
         });
+
         pokemonBox += `</div>`;
         pokemonBox += `</div>`;
-        pokemonBox += `<h2>${jpName.name}</h2>`;
+        pokemonBox += `<h2>${p.name}</h2>`;
         pokemonBox += `<div>`;
         pokemonBox += `<p>高さ:</p>`;
-        pokemonBox += `<p>${height}m</p>`;
+        pokemonBox += `<p>${p.pokemonHeight}m</p>`;
         pokemonBox += `</div>`;
         pokemonBox += `<div>`;
         pokemonBox += `<p>重さ:</p>`;
-        pokemonBox += `<p>${weight}kg</p>`;
+        pokemonBox += `<p>${p.pokemonWeight}kg</p>`;
         pokemonBox += `</div>`;
         pokemonBox += `</div>`;
         pokemonBox += `</div>`;
 
         pokemonsOutput.innerHTML += pokemonBox;
-    } catch (error) {
-        console.log(`このポケモンで失敗：${(e, url)}`);
-    }
+    });
 }
