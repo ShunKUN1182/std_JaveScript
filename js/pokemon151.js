@@ -192,7 +192,6 @@ async function pokemon(url, urlJp, name) {
         let weight = data.weight;
         height = height / 10;
         weight = weight / 10;
-
         pokemonBoxs.push({
             name: jpName.name ?? name,
             pokemonImg: img,

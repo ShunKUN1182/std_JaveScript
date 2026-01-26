@@ -164,7 +164,7 @@ let pokemonBoxs = [];
 let pokemons = "";
 
 async function fetchAllPokemons() {
-    const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=2000&offset=0");
+    const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0");
     const data = await res.json();
     return data.results.map((p) => p.name);
 }
