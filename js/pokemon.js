@@ -3,213 +3,224 @@ const pokemonCount = document.querySelector("#pokemon");
 const pokemonFilter = document.querySelector("#pokemonNameFilter");
 const typeFilters = document.querySelectorAll(".typeFilter");
 
-const pokemons = [
-    "bulbasaur",
-    "ivysaur",
-    "venusaur",
-    "charmander",
-    "charmeleon",
-    "charizard",
-    "squirtle",
-    "wartortle",
-    "blastoise",
-    "caterpie",
-    "metapod",
-    "butterfree",
-    "weedle",
-    "kakuna",
-    "beedrill",
-    "pidgey",
-    "pidgeotto",
-    "pidgeot",
-    "rattata",
-    "raticate",
-    "spearow",
-    "fearow",
-    "ekans",
-    "arbok",
-    "pikachu",
-    "raichu",
-    "sandshrew",
-    "sandslash",
-    "nidoran-f",
-    "nidorina",
-    "nidoqueen",
-    "nidoran-m",
-    "nidorino",
-    "nidoking",
-    "clefairy",
-    "clefable",
-    "vulpix",
-    "ninetales",
-    "jigglypuff",
-    "wigglytuff",
-    "zubat",
-    "golbat",
-    "oddish",
-    "gloom",
-    "vileplume",
-    "paras",
-    "parasect",
-    "venonat",
-    "venomoth",
-    "diglett",
-    "dugtrio",
-    "meowth",
-    "persian",
-    "psyduck",
-    "golduck",
-    "mankey",
-    "primeape",
-    "growlithe",
-    "arcanine",
-    "poliwag",
-    "poliwhirl",
-    "poliwrath",
-    "abra",
-    "kadabra",
-    "alakazam",
-    "machop",
-    "machoke",
-    "machamp",
-    "bellsprout",
-    "weepinbell",
-    "victreebel",
-    "tentacool",
-    "tentacruel",
-    "geodude",
-    "graveler",
-    "golem",
-    "ponyta",
-    "rapidash",
-    "slowpoke",
-    "slowbro",
-    "magnemite",
-    "magneton",
-    "farfetchd",
-    "doduo",
-    "dodrio",
-    "seel",
-    "dewgong",
-    "grimer",
-    "muk",
-    "shellder",
-    "cloyster",
-    "gastly",
-    "haunter",
-    "gengar",
-    "onix",
-    "drowzee",
-    "hypno",
-    "krabby",
-    "kingler",
-    "voltorb",
-    "electrode",
-    "exeggcute",
-    "exeggutor",
-    "cubone",
-    "marowak",
-    "hitmonlee",
-    "hitmonchan",
-    "lickitung",
-    "koffing",
-    "weezing",
-    "rhyhorn",
-    "rhydon",
-    "chansey",
-    "tangela",
-    "kangaskhan",
-    "horsea",
-    "seadra",
-    "goldeen",
-    "seaking",
-    "staryu",
-    "starmie",
-    "mr-mime",
-    "scyther",
-    "jynx",
-    "electabuzz",
-    "magmar",
-    "pinsir",
-    "tauros",
-    "magikarp",
-    "gyarados",
-    "lapras",
-    "ditto",
-    "eevee",
-    "vaporeon",
-    "jolteon",
-    "flareon",
-    "porygon",
-    "omanyte",
-    "omastar",
-    "kabuto",
-    "kabutops",
-    "aerodactyl",
-    "snorlax",
-    "articuno",
-    "zapdos",
-    "moltres",
-    "dratini",
-    "dragonair",
-    "dragonite",
-    "mewtwo",
-    "mew",
-];
+// const pokemons = [
+//     "bulbasaur",
+//     "ivysaur",
+//     "venusaur",
+//     "charmander",
+//     "charmeleon",
+//     "charizard",
+//     "squirtle",
+//     "wartortle",
+//     "blastoise",
+//     "caterpie",
+//     "metapod",
+//     "butterfree",
+//     "weedle",
+//     "kakuna",
+//     "beedrill",
+//     "pidgey",
+//     "pidgeotto",
+//     "pidgeot",
+//     "rattata",
+//     "raticate",
+//     "spearow",
+//     "fearow",
+//     "ekans",
+//     "arbok",
+//     "pikachu",
+//     "raichu",
+//     "sandshrew",
+//     "sandslash",
+//     "nidoran-f",
+//     "nidorina",
+//     "nidoqueen",
+//     "nidoran-m",
+//     "nidorino",
+//     "nidoking",
+//     "clefairy",
+//     "clefable",
+//     "vulpix",
+//     "ninetales",
+//     "jigglypuff",
+//     "wigglytuff",
+//     "zubat",
+//     "golbat",
+//     "oddish",
+//     "gloom",
+//     "vileplume",
+//     "paras",
+//     "parasect",
+//     "venonat",
+//     "venomoth",
+//     "diglett",
+//     "dugtrio",
+//     "meowth",
+//     "persian",
+//     "psyduck",
+//     "golduck",
+//     "mankey",
+//     "primeape",
+//     "growlithe",
+//     "arcanine",
+//     "poliwag",
+//     "poliwhirl",
+//     "poliwrath",
+//     "abra",
+//     "kadabra",
+//     "alakazam",
+//     "machop",
+//     "machoke",
+//     "machamp",
+//     "bellsprout",
+//     "weepinbell",
+//     "victreebel",
+//     "tentacool",
+//     "tentacruel",
+//     "geodude",
+//     "graveler",
+//     "golem",
+//     "ponyta",
+//     "rapidash",
+//     "slowpoke",
+//     "slowbro",
+//     "magnemite",
+//     "magneton",
+//     "farfetchd",
+//     "doduo",
+//     "dodrio",
+//     "seel",
+//     "dewgong",
+//     "grimer",
+//     "muk",
+//     "shellder",
+//     "cloyster",
+//     "gastly",
+//     "haunter",
+//     "gengar",
+//     "onix",
+//     "drowzee",
+//     "hypno",
+//     "krabby",
+//     "kingler",
+//     "voltorb",
+//     "electrode",
+//     "exeggcute",
+//     "exeggutor",
+//     "cubone",
+//     "marowak",
+//     "hitmonlee",
+//     "hitmonchan",
+//     "lickitung",
+//     "koffing",
+//     "weezing",
+//     "rhyhorn",
+//     "rhydon",
+//     "chansey",
+//     "tangela",
+//     "kangaskhan",
+//     "horsea",
+//     "seadra",
+//     "goldeen",
+//     "seaking",
+//     "staryu",
+//     "starmie",
+//     "mr-mime",
+//     "scyther",
+//     "jynx",
+//     "electabuzz",
+//     "magmar",
+//     "pinsir",
+//     "tauros",
+//     "magikarp",
+//     "gyarados",
+//     "lapras",
+//     "ditto",
+//     "eevee",
+//     "vaporeon",
+//     "jolteon",
+//     "flareon",
+//     "porygon",
+//     "omanyte",
+//     "omastar",
+//     "kabuto",
+//     "kabutops",
+//     "aerodactyl",
+//     "snorlax",
+//     "articuno",
+//     "zapdos",
+//     "moltres",
+//     "dratini",
+//     "dragonair",
+//     "dragonite",
+//     "mewtwo",
+//     "mew",
+// ];
 
 let urlJp = `https://pokeapi.co/api/v2/pokemon-species/`;
 let url = `https://pokeapi.co/api/v2/pokemon/`;
 let count = 0;
 let pokemonBoxs = [];
+let pokemons = "";
 
-console.log(pokemonFilter);
+async function fetchAllPokemons() {
+    const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=2000&offset=0");
+    const data = await res.json();
+    return data.results.map((p) => p.name);
+}
 
-pokemons.forEach((e, i) => {
-    urlJp = `https://pokeapi.co/api/v2/pokemon-species/${e}`;
-    url = `https://pokeapi.co/api/v2/pokemon/${e}`;
-    pokemon(url, urlJp);
-});
+async function allPokemons() {
+    pokemons = await fetchAllPokemons();
+    pokemons.forEach((e) => {
+        urlJp = `https://pokeapi.co/api/v2/pokemon-species/${e}`;
+        url = `https://pokeapi.co/api/v2/pokemon/${e}`;
+        pokemon(url, urlJp, e);
+    });
+}
+allPokemons();
 
-async function pokemon(url, urlJp) {
+async function pokemon(url, urlJp, name) {
     try {
         const fetchJp = await fetch(urlJp);
         if (!fetchJp.ok) {
-            throw new Error("APIエラー");
+            console.warn("species 404:", name);
+            return;
         }
         const JpData = await fetchJp.json();
 
         const fetchRes = await fetch(url);
         if (!fetchRes.ok) {
-            throw new Error("APIエラー");
+            console.warn("pokemon 404:", name);
+            return;
         }
         const data = await fetchRes.json();
 
         const jpName = JpData.names.find((n) => n.language.name === "ja");
         const img = data.sprites.other["official-artwork"].front_default;
-        const type = data.types.map((t) => t.type.name);
         const pokemonNo = data.id;
+        const type = data.types.map((t) => t.type.name);
         let height = data.height;
         let weight = data.weight;
         height = height / 10;
         weight = weight / 10;
 
         pokemonBoxs.push({
-            name: jpName.name,
+            name: jpName.name ?? name,
             pokemonImg: img,
             pokemonType: type,
             no: pokemonNo,
             pokemonHeight: height,
             pokemonWeight: weight,
         });
-
-        console.log(pokemonBoxs);
-        if (pokemonBoxs.length === pokemons.length) {
+    } catch (error) {
+        console.warn(`エラー${(name, error)}`);
+    } finally {
+        count++;
+        if (count === pokemons.length) {
             pokemonBoxs.sort((a, b) => a.no - b.no);
             pokemonBoxs.sort;
             outputPokemonData(pokemonBoxs);
         }
-    } catch (error) {
-        console.log(`このポケモンで失敗：${(e, url)}`);
     }
 }
 
@@ -262,7 +273,6 @@ typeFilters.forEach((e) => {
         const sortType = Array.from(typeFilters)
             .filter((cb) => cb.checked)
             .map((cb) => cb.name);
-        console.log(sortType);
 
         if (sortType.length === 0) {
             outputPokemonData(pokemonBoxs);
