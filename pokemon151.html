@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script defer src="js/pokemon151.js"></script>
+        <link rel="stylesheet" href="css/ress.css" />
+        <link rel="stylesheet" href="css/pokemon.css" />
+    </head>
+    <body>
+        <header>
+            <h1>ポケモン図鑑</h1>
+        </header>
+        <main>
+            <div class="pokemonFilters">
+                <div class="nameFilter">
+                    <p>名前で検索</p>
+                    <input
+                        type="text"
+                        id="pokemonNameFilter"
+                        placeholder="ポケモンの名前を入力..."
+                    />
+                </div>
+                <div class="typeFilters">
+                    <p>タイプで絞り込み</p>
+                    <div>
+                        <input type="checkbox" class="typeFilter" name="normal" id="normalType" />
+                        <label for="normalType">ノーマル</label>
+                        <input type="checkbox" class="typeFilter" name="fire" id="fireType" />
+                        <label for="fireType">ほのお</label>
+                        <input type="checkbox" class="typeFilter" name="water" id="waterType" />
+                        <label for="waterType">みず</label>
+                        <input
+                            type="checkbox"
+                            class="typeFilter"
+                            name="electric"
+                            id="electricType"
+                        />
+                        <label for="electricType">でんき</label>
+                        <input type="checkbox" class="typeFilter" name="grass" id="grassType" />
+                        <label for="grassType">くさ</label>
+                        <input type="checkbox" class="typeFilter" name="ice" id="iceType" />
+                        <label for="iceType">こおり</label>
+                        <input
+                            type="checkbox"
+                            class="typeFilter"
+                            name="fighting"
+                            id="fightingType"
+                        />
+                        <label for="fightingType">かくとう</label>
+                        <input type="checkbox" class="typeFilter" name="poison" id="poisonType" />
+                        <label for="poisonType">どく</label>
+                        <input type="checkbox" class="typeFilter" name="ground" id="groundType" />
+                        <label for="groundType">じめん</label>
+                        <input type="checkbox" class="typeFilter" name="flying" id="flyingType" />
+                        <label for="flyingType">ひこう</label>
+                        <input type="checkbox" class="typeFilter" name="psychic" id="psychicType" />
+                        <label for="psychicType">エスパー</label>
+                        <input type="checkbox" class="typeFilter" name="bug" id="bugType" />
+                        <label for="bugType">むし</label>
+                        <input type="checkbox" class="typeFilter" name="rock" id="rockType" />
+                        <label for="rockType">いわ</label>
+                        <input type="checkbox" class="typeFilter" name="ghost" id="ghostType" />
+                        <label for="ghostType">ゴースト</label>
+                        <input type="checkbox" class="typeFilter" name="dragon" id="dragonType" />
+                        <label for="dragonType">ドラゴン</label>
+                        <input type="checkbox" class="typeFilter" name="dark" id="darkType" />
+                        <label for="darkType">あく</label>
+                        <input type="checkbox" class="typeFilter" name="steel" id="steelType" />
+                        <label for="steelType">はがね</label>
+                        <input type="checkbox" class="typeFilter" name="fairy" id="fairyType" />
+                        <label for="fairyType">フェアリー</label>
+                    </div>
+                </div>
+            </div>
+            <p id="pokemon">0匹のポケモンが見つかりました</p>
+            <div class="pokemons"></div>
+        </main>
+        <footer>
+            <p><small>ecc comp &copy; wd1a fukushima</small></p>
+        </footer>
+    </body>
+</html>
