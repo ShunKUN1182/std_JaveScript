@@ -91,5 +91,17 @@ body {
         .dark {
             background-color: #016630;
         }
+        .hint::after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background: #4ade80;
+            border-radius: 50%;
+            opacity: 0.8;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 }
