@@ -3,3 +3,93 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: #0f172a;
+}
+
+.oseroWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin: 80px auto;
+    width: 600px;
+    h1 {
+        font-weight: bold;
+        color: #fff;
+        font-size: 36px;
+        letter-spacing: 6px;
+    }
+    .index_wrap {
+        display: flex;
+        gap: 32px;
+        .index {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 24px;
+            border: rgba(49, 65, 88, 0.5) solid 2px;
+            border-radius: 16px;
+            background-color: rgba(29, 41, 61, 0.5);
+            span {
+                width: 32px;
+                height: 32px;
+                border-radius: 100%;
+            }
+            p {
+                color: #fff;
+                font-weight: bold;
+            }
+        }
+        .black_index {
+            span {
+                background-image: linear-gradient(to left top, #1e2939, #000);
+            }
+        }
+        .white_index {
+            span {
+                background-image: linear-gradient(to left top, #f3f4f6, #fff);
+            }
+        }
+    }
+    .board {
+        height: 600px;
+        width: 600px;
+        padding: 12px;
+        border-radius: 16px;
+        background-color: #00a143;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 2px;
+        .cell {
+            border-radius: 4px;
+            position: relative;
+            .stone {
+                width: 70%;
+                height: 70%;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .black {
+                background: radial-gradient(circle at 30% 30%, #1f2937, #000);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+            }
+
+            .white {
+                background: radial-gradient(circle at 30% 30%, #ffffff, #d1d5db);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            }
+        }
+        .light {
+            background-color: #008236;
+        }
+        .dark {
+            background-color: #016630;
+        }
+    }
+}
