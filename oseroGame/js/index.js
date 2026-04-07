@@ -344,3 +344,28 @@ for (let i = 0; i < setCell.length; i++) {
         `;
     }
 }
+
+function stoneChange() {
+    setCell.forEach((e) => {
+        if (e.setStone == 0) {
+            board.innerHTML += `
+          <div class="cell ${e.bgc} ${e.hint}">
+              <div class="stone"></div>
+          </div>
+        `;
+        } else if (e.setStone == 1) {
+            board.innerHTML += `
+          <div class="cell ${e.bgc} ${e.hint}">
+              <div class="stone black"></div>
+          </div>
+        `;
+        } else {
+            board.innerHTML += `
+          <div class="cell ${e.bgc} ${e.hint}">
+              <div class="stone white"></div>
+          </div>
+        `;
+        }
+    });
+}
+
