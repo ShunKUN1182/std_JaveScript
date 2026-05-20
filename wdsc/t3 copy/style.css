@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    min-height: 80px;
+    height: 80px;
+    display: flex;
+    background-color: tomato;
+    justify-content: space-around;
+    nav {
+        ul {
+            gap: 40px;
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                a {
+                }
+            }
+        }
+    }
+}
+
+.mainvisual {
+    height: 400px;
+    background-size: cover;
+    background-image: url(./img/main-image1.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: imgChange 3s infinite;
+    h2 {
+        font-size: 30px;
+        color: #fff;
+        background-color: rgb(0, 1, 77);
+        padding: 10px;
+    }
+    p {
+        font-size: 20px;
+        color: #fff;
+        background-color: rgb(0, 1, 77);
+        padding: 10px;
+    }
+}
+
+.content {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+footer {
+    nav {
+        ul {
+            gap: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 300px;
+        }
+    }
+}
+
+@keyframes imgChange {
+    0% {
+        background-image: url("./img/main-image1.png");
+    }
+    50% {
+        background-image: url("./img/main-image2.png");
+    }
+    100% {
+        background-image: url("./img/main-image1.png");
+    }
+}
+
+@media screen and (max-width: 430px) {
+    header {
+        /* position: fixed;
+        bottom: 0; */
+        nav {
+            ul {
+                background-color: tomato;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                width: 100%;
+                li {
+                    width: 60px;
+                    height: 80px;
+                    background-size: 60px;
+                    background-repeat: no-repeat;
+                    list-style-type: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    font-size: 12px;
+                    &:nth-child(1) {
+                        background-image: url(./img/icon-home-black.png);
+                    }
+                    &:nth-child(2) {
+                        background-image: url(./img/icon-file-black.png);
+                    }
+                    &:nth-child(3) {
+                        background-image: url(./img/icon-info-black.png);
+                    }
+                    &:nth-child(4) {
+                        background-image: url(./img/icon-question-black.png);
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        nav {
+            display: hidden;
+        }
+    }
+}

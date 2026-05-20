@@ -1,0 +1,12 @@
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width:430px) {
+    form {
+
+        flex-direction: column;
+    }
+    
+}
