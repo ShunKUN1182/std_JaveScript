@@ -25,15 +25,10 @@ const wd2a = [
     },
 ];
 
-function MyButton() {
-    const [count, setCount] = useState(0);
-    function handleClick() {
-        // alert("You clicked me!");
-        setCount(count + 1);
-    }
+function MyButton({ count, onClick }) {
     return (
         <>
-            <button onClick={handleClick}>今 {count} 回やで</button>
+            <button onClick={onClick}>今 {count} 回やで</button>
         </>
     );
 }
@@ -45,11 +40,17 @@ const listItems = wd2a.map((member) => (
 ));
 
 export default function App() {
+    const [count, setCount] = useState(0);
+    function handleClick() {
+        setCount(count + 1);
+    }
+
     return (
         <>
             <div>
                 <h1>これは{user.name}のアプリです</h1>
-                <MyButton />
+                <MyButton count={count} onClick={handleClick} />
+                <MyButton count={count} onClick={handleClick} />
             </div>
             <ul>{listItems}</ul>
         </>
