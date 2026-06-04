@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>m1</title>
+    <link rel="stylesheet" href="base.css" />
+    <style>
+      /* .game {
+        display: none;
+      } */
+
+      .game-over {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="game wrap">
+      <div class="score">
+        <span id="score-count">000000000</span>
+      </div>
+
+      <div class="map">
+        <div class="character" style="grid-row: 2; grid-column: 3">
+          <img src="images/tashiro.gif" alt="tashiro" />
+        </div>
+
+        <div class="point-up" style="grid-row: 5; grid-column: 2">
+          <img src="images/point.png" alt="" />
+        </div>
+
+        <div class="stone" style="grid-row: 5; grid-column: 3">
+          <img src="images/stone.png" alt="" />
+        </div>
+
+        <div class="power-up" style="grid-row: 5; grid-column: 4">
+          <img src="images/power.png" alt="" />
+        </div>
+
+        <!-- <div class="slow">
+          <img src="images/slow.png" alt="" />
+        </div> -->
+
+        <div class="wall-right"></div>
+        <div class="wall-left"></div>
+      </div>
+    </main>
+
+    <div class="login">
+      <form action="">
+        <div class="login-block">
+          <dl>
+            <div class="input-group">
+              <dt>ニックネーム</dt>
+              <dd>
+                <input type="text" value="" />
+              </dd>
+            </div>
+
+            <div class="input-group">
+              <dt>プレイヤーアイコン選択</dt>
+              <div class="icon-list">
+                <div class="icon-select">
+                  <input type="radio" name="icon" id="icon1" />
+                  <label for="icon1" class="icon-image">
+                    <img src="icon/icon1.png" alt="" />
+                  </label>
+                </div>
+
+                <div class="icon-select">
+                  <input type="radio" name="icon" id="icon2" />
+                  <label for="icon2" class="icon-image">
+                    <img src="icon/icon2.png" alt="" />
+                  </label>
+                </div>
+
+                <div class="icon-select">
+                  <input type="radio" name="icon" id="icon3" />
+                  <label for="icon3" class="icon-image">
+                    <img src="icon/icon3.png" alt="" />
+                  </label>
+                </div>
+
+                <div class="icon-select">
+                  <input type="radio" name="icon" id="icon4" />
+                  <label for="icon4" class="icon-image">
+                    <img src="icon/icon4.png" alt="" />
+                  </label>
+                </div>
+              </div>
+            </div>
+          </dl>
+
+          <div class="start">
+            <button type="button">Game Start</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="game-over">
+      <div class="game-over-block">
+        <h2>Game Over</h2>
+        <div class="scoreTime">
+          <h3>今回のスコア</h3>
+          <p>0000000</p>
+
+          <button type="button">投稿</button>
+        </div>
+
+        <hr />
+
+        <div class="ranking">
+          <h3>ランキング</h3>
+          <dl class="ranking-list">
+            <div class="ranking-listItem">
+              <dt>
+                <span class="icon-image">
+                  <img src="icon/icon1.png" alt="" />
+                </span>
+                AAAA
+              </dt>
+              <dd>0000200</dd>
+            </div>
+
+            <div class="ranking-listItem">
+              <dt>
+                <span class="icon-image">
+                  <img src="icon/icon2.png" alt="" />
+                </span>
+                BBB
+              </dt>
+              <dd>0000100</dd>
+            </div>
+
+            <div class="ranking-listItem">
+              <dt>
+                <span class="icon-image">
+                  <img src="icon/icon3.png" alt="" />
+                </span>
+                CCC
+              </dt>
+              <dd>0000050</dd>
+            </div>
+          </dl>
+        </div>
+
+        <hr />
+
+        <div class="retry">
+          <button type="button">Retry</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

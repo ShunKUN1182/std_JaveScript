@@ -1,0 +1,209 @@
+@font-face {
+  font-family: "x12y12";
+  src: url(font/x12y12pxMaruMinya.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  image-rendering: crisp-edges;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  background-color: #000;
+  font-family: "x12y12", "游ゴシック", "YuGothic", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-weight: 500;
+}
+
+ul {
+  list-style: none;
+}
+
+hr {
+  border: none;
+  border-top: solid 1px #FFF;
+}
+
+form {
+  width: 100%;
+}
+
+button, input {
+  width: 100%;
+  border-radius: .25rem;
+}
+
+input {
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  border: solid 1px #FFF;
+  background: #FFF;
+}
+
+button {
+  padding: 1rem 2rem;
+  font-family: "x12y12";
+  font-weight: bold;
+  letter-spacing: .25rem;
+  transition: .5s;
+  border: solid 1px #FF0;
+  background: #FF0;
+}
+
+button:hover,
+button:focus {
+  border: solid 1px #FF0;
+  background: #0f08de;
+  color: #FF0;
+}
+
+.wrap {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 80px 1fr;
+  place-items: center;
+}
+
+.score {
+  color: #FFF;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  width: calc(64px * 5);
+  letter-spacing: .25rem;
+}
+
+.map {
+  background-color: #333;
+  background-image: url(images/water01.gif);
+  background-position: left top;
+  height: calc(64px * 12);
+  position: relative;
+  width: calc(64px * 5);
+  display: grid;
+  grid-template-columns: repeat(5, 64px);
+  grid-template-rows: repeat(12, 64px);
+  overflow: hidden;
+}
+
+.character {
+  display: inline-block;
+  height: 64px;
+  width: 64px;
+}
+
+[class^=wall] {
+  grid-row: 1 / 13;
+}
+
+.wall-left {
+  background-image: url(images/wall01.png);
+  grid-column: 1;
+}
+
+.wall-right {
+  background-image: url(images/wall02.png);
+  grid-column: 5;
+}
+
+.login, .game-over {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background: #0f08de;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #FFF;
+  align-items: center;
+}
+
+[class$="-block"] {
+  width: calc(100% - 4rem);
+  display: grid;
+  gap: 3rem;
+  margin: auto;
+}
+
+.login {
+  display: none;
+}
+
+.input-group + .input-group {
+  margin-top: 2rem;
+}
+
+.input-group > * + * {
+  margin-top: 1rem;
+}
+
+.icon-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-select [type="radio"] {
+  display: none;
+}
+
+.icon-select input[name="icon"]:checked + .icon-image {
+  outline: dotted 5px #FF0;
+}
+
+.icon-image {
+  display: inline-block;
+  background: #FFF;
+  outline: solid 5px #FFF;
+  border-radius: 100%;
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.icon-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.game-over-block {
+  text-align: center;
+}
+
+.game-over-block h2 {
+  font-size: 4rem;
+}
+
+.scoreTime, .ranking {
+  font-size: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.scoreTime button {
+  margin-top: 1rem;
+}
+
+.ranking-list > * + * {
+  margin-top: 2rem;
+}
+
+.ranking-listItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.ranking-listItem .icon-image {
+  width: 32px;
+  height: 32px;
+}
