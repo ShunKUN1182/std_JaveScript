@@ -1,8 +1,8 @@
 const btn = document.querySelector(".btn");
-const btnX = btn.offsetTop;
-const btnY = btn.offsetLeft;
-const btnWidth = btn.offsetWidth;
-const btnHeight = btn.offsetHeight;
+const btnX = btn.getBoundingClientRect().top;
+const btnY = btn.getBoundingClientRect().left;
+const btnWidth = btn.getBoundingClientRect().width;
+const btnHeight = btn.getBoundingClientRect().height;
 
 btn.addEventListener("mouseenter", (e) => {
     console.log(e);
