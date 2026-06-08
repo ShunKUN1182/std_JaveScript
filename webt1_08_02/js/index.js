@@ -1,42 +1,78 @@
 const bsoWrap = document.querySelector(".bso_wrap");
 const btnWrap = document.querySelector(".btn_wrap");
 const ballBtn = document.querySelector("#ballBtn");
-const strikeBtn = document.querySelector("strikeBtn");
+const strikeBtn = document.querySelector("#strikeBtn");
 const outBtn = document.querySelector("#outBtn");
 let counter = [0, 0, 0];
-let ballWrap = "";
-let strikeWrap = "";
-let outWrap = "";
-console.log(ballBtn);
+let ballWrap = `
+          <div class="ball_wrap">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>;
+        `;
+let strikeWrap = `
+          <div class="strike_wrap">
+              <span></span>
+              <span></span>
+          </div>
+        `;
+let outWrap = `
+          <div class="out_wrap">
+              <span></span>
+              <span></span>
+          </div>
+        `;
 
-// function renderBso() {}
+renderBso();
 
 btnWrap.addEventListener("click", (e) => {
-    // console.log(e.target);
     if (e.target == ballBtn) {
         countChangeBall();
-        renderBall();
         renderBso();
     }
     if (e.target == strikeBtn) {
-        console.log("ストライク");
+        countChangeStrike();
+        renderBso();
     }
     if (e.target == outBtn) {
-        console.log("アウト");
+        countChangeOut();
+        renderBso();
     }
+    console.log(counter);
 });
 
 function renderBso() {
-    bsoWrap.innerHTML = ballWrap;
+    renderBall();
+    renderStrike();
+    renderOut();
+    bsoWrap.innerHTML = `${ballWrap}${strikeWrap}${outWrap}`;
 }
 
 function countChangeBall() {
     counter[0] += 1;
     if (counter[0] > 3) {
-        console.log("ファーボールやで！");
         counter[0] = 0;
+        counter[1] = 0;
     }
-    console.log(counter[0]);
+}
+
+function countChangeStrike() {
+    counter[1] += 1;
+    if (counter[1] > 2) {
+        counter[1] = 0;
+        counter[0] = 0;
+        counter[2] += 1;
+    }
+}
+
+function countChangeOut() {
+    counter[2] += 1;
+    if (counter[2] > 2) {
+        counter[0] = 0;
+        counter[1] = 0;
+        counter[2] = 0;
+    }
 }
 
 function renderBall() {
@@ -75,5 +111,59 @@ function renderBall() {
               <span class="active"></span>
           </div>;
         `;
+    }
+}
+
+function renderStrike() {
+    if (counter[1] == 0) {
+        strikeWrap = `
+          <div class="strike_wrap">
+              <span></span>
+              <span></span>
+          </div>
+      `;
+    }
+    if (counter[1] == 1) {
+        strikeWrap = `
+          <div class="strike_wrap">
+              <span class="active"></span>
+              <span></span>
+          </div>
+      `;
+    }
+    if (counter[1] == 2) {
+        strikeWrap = `
+          <div class="strike_wrap">
+              <span class="active"></span>
+              <span class="active"></span>
+          </div>
+      `;
+    }
+}
+
+function renderOut() {
+    if (counter[2] == 0) {
+        outWrap = `
+          <div class="out_wrap">
+              <span></span>
+              <span></span>
+          </div>
+      `;
+    }
+    if (counter[2] == 1) {
+        outWrap = `
+          <div class="out_wrap">
+              <span class="active"></span>
+              <span></span>
+          </div>
+      `;
+    }
+    if (counter[2] == 2) {
+        outWrap = `
+          <div class="out_wrap">
+              <span class="active"></span>
+              <span class="active"></span>
+          </div>
+      `;
     }
 }
