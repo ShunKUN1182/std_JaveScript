@@ -65,3 +65,6 @@ function classAdd(direction) {
 //         return;
 //     }
 // });
+
+setInterval()
+setTimeout()
