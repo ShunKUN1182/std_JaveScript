@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ベースボールカウントだぜ！</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                background-color: #333;
+            }
+            .bso_wrap {
+                margin: 100px auto 0;
+                width: 400px;
+                height: 400px;
+                border: 1px solid #fff;
+                border-radius: 4px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 20px;
+                div {
+                    display: flex;
+                    justify-content: flex-start;
+                    gap: 30px;
+                    span {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 100%;
+                        border: 2px solid #fff;
+                        background-color: #fff;
+                    }
+                }
+                .ball_wrap {
+                    .active {
+                        background-color: #00b050;
+                    }
+                }
+                .strike_wrap {
+                    .active {
+                        background-color: #ffc000;
+                    }
+                }
+                .out_wrap {
+                    .active {
+                        background-color: #ff0000;
+                    }
+                }
+            }
+            .btn_wrap {
+                margin: 30px auto;
+                width: 400px;
+                display: flex;
+                gap: 30px;
+                justify-content: space-between;
+                button {
+                    width: 120px;
+                    height: 40px;
+                    background-color: rgb(76, 168, 255);
+                    border: none;
+                    border-radius: 4px;
+                    color: #fff;
+                    font-weight: bold;
+                }
+            }
+        </style>
+        <script src="js/index.js" defer></script>
+    </head>
+    <body>
+        <div class="bso_wrap">
+            <div class="ball_wrap">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="strike_wrap">
+                <span class="active"></span>
+                <span></span>
+            </div>
+            <div class="out_wrap">
+                <span class="active"></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="btn_wrap">
+            <button type="button" id="ballBtn">ボール！</button>
+            <button type="button" id="strikeBtn">ストライク！</button>
+            <button type="button" id="outBtn">アウト！</button>
+        </div>
+    </body>
+</html>
