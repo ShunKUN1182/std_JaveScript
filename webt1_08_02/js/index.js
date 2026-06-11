@@ -62,12 +62,14 @@ function countChangeStrike() {
     if (counter[1] > 2) {
         counter[1] = 0;
         counter[0] = 0;
-        counter[2] += 1;
+        countChangeOut();
     }
 }
 
 function countChangeOut() {
     counter[2] += 1;
+    counter[0] = 0;
+    counter[1] = 0;
     if (counter[2] > 2) {
         counter[0] = 0;
         counter[1] = 0;
