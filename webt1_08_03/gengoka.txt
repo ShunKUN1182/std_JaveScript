@@ -1,0 +1,45 @@
+若年者で2年連続でてくている、cssのみで実装するスライドアニメーションを実装しました。
+
+今までjsを使用して実装したことはありました（湯煙コーヒーとか？jsの授業課題とか）
+
+ただ、cssのみで実装したのは今回が初めて、、だったはずです。
+
+アニメーションを使用して、実装していきましたが、一つ大きな勘違いを僕はしていました。
+
+最初のhtmlの構造がこちらです。
+
+<div class="mainvisual__wrap">
+    <div class="mainvisual__img">1枚目</div>
+    <div class="mainvisual__img">2枚目</div>
+    <div class="mainvisual__img">3枚目</div>
+</div>
+
+親のdivタグに対して、overflowと移動役の両方を担わせていました。
+
+ただこの構造だと上手く動いてくれませんでした、
+
+理由はoverflowをかけてしまうことで、移動先が見えなくなってしまうからです。
+
+なので解決策としてはoverflowをかけるdivと移動させるdivを分けることです。
+
+<div class="mainvisual">
+    <div class="mainvisual__wrap">
+        <div class="mainvisual__img">1枚目</div>
+        <div class="mainvisual__img">2枚目</div>
+        <div class="mainvisual__img">3枚目</div>
+    </div>
+</div>
+
+改善後のコードがこちらです。
+
+mainvisualがoverflowで隠す役割を担い、mainvisual_wrapで移動する役割を担います。
+
+こうすることで、中のmainvisual_imgが死なずに、スライダーを実現出来ました。
+
+今までcssでつまづいた時は、cssだけを直せばなんとかなると思い込んでしまい、ずっとcssと睨めっこして時間が過ぎていく、、、
+
+といったことが何度もありました。
+
+でもこれからはそういう時こそ冷静にhtmlの構造を見直すことも重要なんだと、再認識しました。
+
+今度は、jsを使ってもっと良いスライダーアニメーションを作ってみたいです。
