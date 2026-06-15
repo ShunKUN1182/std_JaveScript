@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>パスワードの目隠し機能を作ってみよう</title>
+    </head>
+    <body>
+        <main class="login-page">
+            <form class="login-form" action="#" method="post">
+                <label class="login-form__label" for="email">
+                    メールアドレス
+                    <input
+                        class="login-form__input"
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@email.com"
+                    />
+                </label>
+
+                <label class="login-form__label" for="password">
+                    パスワード
+                    <input
+                        class="login-form__input"
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="パスワードを入力"
+                    />
+                    <span id="eyeIcon">
+                        <img src="./eye.png" alt="" />
+                    </span>
+                </label>
+
+                <button class="login-form__button" type="submit">ログイン</button>
+            </form>
+        </main>
+        <script src="js/idnex.js"></script>
+    </body>
+</html>
