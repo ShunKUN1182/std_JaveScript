@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>雀魂のUI再現！(一部)</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <button type="button" id="helpBtn">?</button>
+        <div class="modal">
+            <h1>設定画面</h1>
+            <button id="stopBtn">×</button>
+        </div>
+        <script>
+            const helpBtn = document.querySelector("#helpBtn");
+            const modal = document.querySelector(".modal");
+            const stopBtn = document.querySelector("#stopBtn");
+            const body = document.querySelector("body");
+            helpBtn.addEventListener("click", () => {
+                modal.style.display = "flex";
+                body.addEventListener("click", (e) => {
+                    if (e.target == body || e.target == stopBtn) {
+                        modal.classList.add("removeModal");
+                        setTimeout(() => {
+                            modal.style.display = "none";
+                            modal.classList.remove("removeModal");
+                        }, 200);
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
