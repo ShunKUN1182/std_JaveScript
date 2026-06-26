@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            #wrap {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 200px;
+                .btn_wrap {
+                    display: flex;
+                    gap: 0;
+                    button {
+                        width: 300px;
+                        height: 40px;
+                    }
+                }
+                .item {
+                    width: 900px;
+                    height: 500px;
+                    background-color: tomato;
+                }
+                .no {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="btn_wrap">
+                <button type="button">ボタン1</button>
+                <button type="button">ボタン2</button>
+                <button type="button">ボタン3</button>
+            </div>
+            <div class="item">天井</div>
+            <div class="item no">天下</div>
+            <div class="item no">唯我独尊</div>
+        </div>
+        <script>
+            const items = document.querySelectorAll(".item");
+            const btns = document.querySelectorAll("button");
+            console.log(items, btns);
+        </script>
+    </body>
+</html>
