@@ -1,0 +1,43 @@
+.btn {
+    margin: 300px auto;
+    width: 800px;
+    height: 200px;
+    background-color: #000;
+    transition: 2s;
+    position: relative;
+    overflow: hidden;
+    border: 0.2px solid #ddd;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 300px;
+        left: -600px;
+        width: 1000px;
+        height: 1000px;
+        border-radius: 100%;
+        transition: 0.5s;
+        background-color: #fff;
+    }
+    p {
+        margin: 0;
+        color: #fff;
+        font-weight: bold;
+        font-size: 32px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        letter-spacing: 4px;
+        transition: 0.2s;
+    }
+    &:hover {
+        p {
+            color: #000;
+            z-index: 100;
+        }
+        &::after {
+            top: -200px;
+            left: -300px;
+        }
+    }
+}
