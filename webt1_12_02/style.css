@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrap {
+    margin: 200px auto;
+    width: 1200px;
+    height: 300px;
+    border-radius: 16px;
+    background-image: linear-gradient(#3facf1, #42b3f2);
+    padding: 40px;
+    position: relative;
+    overflow-y: hidden;
+    .text_wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        h2 {
+            font-size: 20px;
+            color: #fff;
+        }
+        p {
+            font-size: 28px;
+            font-weight: bold;
+            color: #fff;
+        }
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+            height: 60px;
+            border-radius: 32px;
+            background-color: #fff;
+            color: #3facf1;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+    }
+    .card {
+        position: absolute;
+        width: 200px;
+        transition: 0.3s;
+        img {
+            transition: 0.3s;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+        }
+    }
+    .leftCard {
+        right: 350px;
+        top: 70px;
+        img {
+            transform: rotate(-15deg);
+        }
+    }
+    .centerCard {
+        right: 200px;
+        top: 35px;
+    }
+    .rightCard {
+        right: 50px;
+        top: 70px;
+        img {
+            transform: rotate(15deg);
+        }
+    }
+    &:hover {
+        .text_wrap {
+            a {
+                opacity: 0.8;
+            }
+        }
+        .leftCard {
+            img {
+                transform: rotate(-20deg);
+            }
+        }
+        .centerCard {
+            top: 25px;
+        }
+        .rightCard {
+            img {
+                transform: rotate(20deg);
+            }
+        }
+    }
+}
