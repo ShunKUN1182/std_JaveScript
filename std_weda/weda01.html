@@ -7,9 +7,41 @@
     </head>
     <body>
         <h1>データ型について</h1>
+        <button type="button" id="button">ボタンだよ</button>
         <script>
-            const ueda = 1;
-            
+            const name = "上田"; // string 文字列
+            const num = 12; // Number init 数値
+            const bool = true; // Boolean 真偽値(true / false)
+            const array = ["うえだ", "ふくしま", "さかぐち"]; // Array　配列型
+            const names = { ueda: 19, fukusima: 20 }; // object オブジェクト型
+            const wd = [
+                { ueda: 2, fukusima: 9 },
+                { dan: 1, goway: 2 },
+                { takagi: 2, kona: 3 },
+            ];
+
+            const teisuu = 10; // 定数宣言
+            let hensuu = 20; //変数宣言
+            hensuu = hensuu + 20;
+            console.log(hensuu);
+
+            function jisaku(color = "tomato") {
+                // 自分で作る関数の場合
+                let body = document.querySelector("body");
+                body.style.background = color;
+            }
+            jisaku();
+
+            const btn = document.querySelector("#button");
+            btn.addEventListener("click", () => {
+                jisaku("gold");
+            });
+
+            const weda = 0.1;
+
+            if (20 !== weda) {
+                console.log("条件あってるでー！");
+            }
         </script>
     </body>
 </html>
